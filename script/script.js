@@ -5,18 +5,21 @@ ReactDOM.render(
         </div>
         <div className="busca">
             <input placeholder="busca"></input>
-            <button><i class="bi bi-search"></i></button>
+            <a href=""><i class="bi bi-search"></i></a>
+        </div>
+        <div>
+            <a href=""><i class="bi bi-house"></i></a>
+            <a href=""><i class="bi bi-briefcase"></i></a>
+            <a href=""><i class="bi bi-bell"></i></a>
+            <a href=""><i class="bi bi-chat"></i></a>
+            <a href=""><i class="bi bi-person"></i></a>
         </div>
         <div className="logout">
-                <button><i class="bi bi-bell"></i></button>
-                <button></button>
-                <button><i class="bi bi-box-arrow-right"></i></button>
+                
+                <a href=""><i class="bi bi-box-arrow-right"></i></a>
+                
         </div>
         
     </div>,
     document.getElementById("menu-suspenso")
-);
-ReactDOM.render(
-    <h1>Olá, eu sou o React. Estou renderizando na div secundário</h1>,
-    document.getElementById("secundario")
 );
