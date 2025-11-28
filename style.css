@@ -16,8 +16,16 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    gap: 2rem;
     padding: 0 1.5rem;
+}
+
+.logo-busca {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-grow: 1;
 }
 
 .logo {
@@ -31,20 +39,26 @@ body{
 }
 
 .busca {
-    width: clamp(140px, 20vw, 250px);
-    gap: 0.5rem;
     display: flex;
     align-items: center;
-    box-shadow: 0px 4px 4px rgba(76, 30, 119, 0.384);
-    border-radius: 8px;
+    gap: 0.5rem;
+    flex-grow: 1;
+    min-width: 160px;
+    max-width: 720px;
     padding: 0.8em;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.295);
+    border-radius: 8px;
 }
 
 .busca input{
     width: 90%;
-    height: 0.8em;
+    height: 1em;
     border: none;
     font-size: 1em;
+}
+
+.busca input:focus{
+    outline: none;
 }
 
 .busca a{
@@ -52,33 +66,40 @@ body{
     color: #4C1E77;
 }
 
-.barra-tarefas {
-    width: 15%;
+.barra-logout {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 2.5rem;
+    margin-left: auto;
+}
+
+.barra-tarefas {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
 }
 
 .barra-tarefas a{
     font-size: 2em;
+    padding: 0.45em;
     color: #4C1E77;
 }
 
 .barra-tarefas a:hover{
     color: #A020F0;
+    border-bottom: #4C1E77 3px solid;
     cursor: pointer;
 }
 
 .logout {
+    padding: 1em;
     font-size: 2em;
     color: #FF0000;
-    border: none;
-    background: none;
     cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    .barra-tarefas {
+    .barra-logout {
         display: none;
     }
 
