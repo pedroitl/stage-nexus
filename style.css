@@ -1,109 +1,187 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+.cabecalho {
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
 }
 
-body{
-    height: 100vh;
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.menu-suspenso{
-    width: 100%;
-    height: 4rem;
-    background-color: #ffffff;
-    box-shadow: 0px 4px 4px rgba(76, 30, 119, 0.384) ;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 2rem;
-    padding: 0 1.5rem;
+.logo-imagem {
+  height: 45px;
 }
 
-.logo-busca {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-grow: 1;
+.logo-texto {
+  font-size: 26px;
+  font-weight: 700;
+  color: #222;
+  font-family: Arial, sans-serif;
 }
 
-.logo {
-    height: 100%;
-    display: flex;
-    align-items: center;
+.navegacao {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-.logo img{
-    height: 4em;
+.link-simples {
+  font-size: 18px;
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-.busca {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex-grow: 1;
-    min-width: 160px;
-    max-width: 720px;
-    padding: 0.8em;
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.295);
-    border-radius: 8px;
+.botao-nav {
+  padding: 8px 16px;
+  background: #6c47ff;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.busca input{
-    width: 90%;
-    height: 1em;
-    border: none;
-    font-size: 1em;
+.secao-hero {
+  width: 100%;
+  padding: 60px 20px 40px 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.busca input:focus{
-    outline: none;
+.hero-conteudo {
+  max-width: 900px;
+  text-align: center;
 }
 
-.busca a{
-    font-size: 1.5em;
-    color: #4C1E77;
+.hero-titulo {
+  font-size: 38px;
+  font-weight: 700;
+  color: #1f1f1f;
+  margin-bottom: 20px;
 }
 
-.barra-logout {
-    display: flex;
-    align-items: center;
-    gap: 2.5rem;
-    margin-left: auto;
+.hero-subtitulo {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
 }
 
-.barra-tarefas {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
+.hero-acoes {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
 }
 
-.barra-tarefas a{
-    font-size: 2em;
-    padding: 0.45em;
-    color: #4C1E77;
+.botao-primario,
+.botao-secundario {
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid transparent;
 }
 
-.barra-tarefas a:hover{
-    color: #A020F0;
-    border-bottom: #4C1E77 3px solid;
-    cursor: pointer;
+.botao-primario {
+  background: #6c47ff;
+  color: #fff;
 }
 
-.logout {
-    padding: 1em;
-    font-size: 2em;
-    color: #FF0000;
-    cursor: pointer;
+.botao-secundario {
+  background: #fff;
+  color: #6c47ff;
+  border-color: #6c47ff;
 }
 
-@media (max-width: 768px) {
-    .barra-logout {
-        display: none;
-    }
+.botao-primario:hover,
+.botao-secundario:hover {
+  filter: brightness(0.95);
+}
 
-    .busca {
-        width: clamp(120px, 40vw, 180px);
-    }
+.hero-informacao {
+  font-size: 14px;
+  color: #777;
+}
+
+.secao-sobre {
+  width: 100%;
+  max-width: 900px;
+  margin: 60px auto 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.sobre-titulo {
+  font-size: 36px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.sobre-texto {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.secao-beneficios {
+  max-width: 1000px;
+  margin: 40px auto 60px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.beneficio-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px 18px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border: 1px solid #f0f0f0;
+}
+
+.beneficio-titulo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.beneficio-texto {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.footer {
+  width: 100%;
+  padding: 20px 10px;
+  margin-top: 40px;
+  border-top: 1px solid #e5e5e5;
+  background: #fafafa;
+  text-align: center;
+}
+
+.footer-texto {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.footer-texto-menor {
+  font-size: 12px;
+  color: #999;
 }
