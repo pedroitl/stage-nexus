@@ -4,14 +4,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stage Nexus</title>
-    <link rel="stylesheet "href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css "> <!--Bootstrap icones-->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js" ></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" ></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <script type="text/babel" src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/HomeDeslogado/HomeDeslogado.css">
 </head>
+
 <body>
-    <div id="menu-suspenso"></div>
-    <div id="secundario"></div>
+
+    <header class="cabecalho">
+        <div class="logo-area">
+            <img src="assets/logotipo-sem-fundo.png" alt="stage nexus" class="logo-imagem">
+            <span class="logo-texto">Stage Nexus</span>
+        </div>
+
+        <nav class="navegacao">
+            <a href="pages/login.html" class="link-simples">Login</a>
+            <a href="pages/cadastro.html" class="botao-nav">Cadastre-se</a>
+        </nav>
+    </header>
+
+    <section class="secao-hero">
+        <div class="hero-conteudo">
+            <h1 class="hero-titulo">Encontre oportunidades, talentos e conexões no universo musical.</h1>
+
+            <p class="hero-subtitulo">
+                O Stage Nexus conecta artistas e produtores em um ambiente pensado para divulgar trabalhos,
+                encontrar projetos e organizar toda a comunicação em um só lugar.
+            </p>
+
+            <div class="hero-acoes">
+                <a href="pages/login.html" class="botao-primario">Já tenho conta</a>
+                <a href="pages/cadastro.html" class="botao-secundario">Quero me cadastrar</a>
+            </div>
+
+            <p class="hero-informacao">Leva menos de 2 minutos para começar.</p>
+        </div>
+    </section>
+
+    <section class="secao-sobre">
+        <h1 class="sobre-titulo">Conectando artistas e produtores</h1>
+
+        <p class="sobre-texto">
+            O Stage Nexus é uma plataforma criada para aproximar talentos e oportunidades.
+            Aqui, artistas podem apresentar seus trabalhos e produtores encontram exatamente
+            o que procuram para seus projetos. Tudo isso de forma simples, rápida e organizada.
+        </p>
+
+        <p class="sobre-texto">
+            Seja você um artista buscando visibilidade ou um produtor em busca de novos talentos,
+            o Stage Nexus facilita o caminho e torna as conexões mais eficientes.
+        </p>
+    </section>
+
+    <section class="secao-beneficios">
+        <div class="beneficio-card">
+            <h2 class="beneficio-titulo">Para artistas</h2>
+            <p class="beneficio-texto">
+                Crie seu perfil, apresente seus projetos, receba propostas e seja encontrado por
+                produtores que realmente buscam o seu estilo.
+            </p>
+        </div>
+
+        <div class="beneficio-card">
+            <h2 class="beneficio-titulo">Para produtores</h2>
+            <p class="beneficio-texto">
+                Encontre artistas filtrando por gênero, localização e perfil.
+                Organize oportunidades e contatos em um único painel.
+            </p>
+        </div>
+
+        <div class="beneficio-card">
+            <h2 class="beneficio-titulo">Gestão centralizada</h2>
+            <p class="beneficio-texto">
+                Centralize mensagens, notificações e propostas em um fluxo simples,
+                sem precisar ficar pulando entre vários aplicativos.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="footer-texto">Stage Nexus &copy; 2025 — Conectando artistas e produtores.</p>
+        <p class="footer-texto-menor">Projeto acadêmico. Plataforma em desenvolvimento.</p>
+    </footer>
+
 </body>
 </html>
