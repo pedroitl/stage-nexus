@@ -8,6 +8,9 @@ ReactDOM.render(
                 <input placeholder="Buscar perfis..."></input>
                 <a href=""><i class="bi bi-search"></i></a>
             </div>
+            <button id="btn-menu" className="hamburguer">
+                <i class="bi bi-list"></i>
+            </button>
         </div>
         <div className="barra-logout">
             <div className="barra-tarefas">
@@ -21,7 +24,22 @@ ReactDOM.render(
                 <a href="/pages/login.html"><i class="bi bi-box-arrow-right"></i></a>
             </div>
         </div>
-            
+        <div id="menu-mobile" className="menu-mobile escondido">
+            <a href="">Home</a>
+            <a href="">Trabalhos</a>
+            <a href="">Notificações</a>
+            <a href="">Chat</a>
+            <a href="">Perfil</a>
+            <a href="">Logout</a>
+        </div>
     </div>,
     document.getElementById("menu-suspenso")
 );
+
+const btnMenu = document.querySelector("#btn-menu");
+const menuMobile = document.querySelector("#menu-mobile");
+
+btnMenu.addEventListener("click", () => {
+    menuMobile.classList.toggle("escondido");
+});
+
