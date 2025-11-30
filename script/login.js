@@ -4,8 +4,8 @@ ReactDOM.render(
       <img src="../assets/logotipo-sem-fundo.png" alt="logo" />
       <h1>Stage Nexus</h1>
       <div className="outros-logins">
-        <button>Google</button>
-        <button>Gmail</button>
+        <button className="btn-social">Google</button>
+        <button className="btn-social">Gmail</button>
       </div>
     </div>
 
@@ -22,8 +22,8 @@ ReactDOM.render(
           <option value="produtor">Produtor</option>
         </select>
 
-        <button type="submit" id="login">Login</button>
-        <button type="button" id="cadastro">Cadastre-se</button>
+        <button type="submit" id="login" className="btn-login">Login</button>
+        <button type="button" id="cadastro" className="btn-login">Cadastre-se</button>
       </form>
     </div>
   </div>,
