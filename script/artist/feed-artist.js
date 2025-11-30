@@ -26,9 +26,9 @@ ReactDOM.render(
         </div>
         <div id="menu-mobile" className="menu-mobile escondido">
             <a href="/pages/artist/feed-artist.html">Home</a>
-            <a href="/pages/artist/oportunidade-artist.html">Trabalhos</a>
+            <a href="/pages/artist/oportunidade-artist.html">Oportunidades</a>
             <a href="/pages/artist/notificacoes-artist.html">Notificações</a>
-            <a href="/pages/artist/mensagens-artist.html">Chat</a>
+            <a href="/pages/artist/mensagens-artist.html">Mensagens</a>
             <a href="/pages/artist/perfil-artist.html">Perfil</a>
             <a href="../../index.html">Logout</a>
         </div>
@@ -74,7 +74,6 @@ async function renderPosts() {
                 </div>
             </div>
 
-            {/* POST 2 */}
             <div className="post-card">
                 <div className="post-header">
                     <div className="post-info">
@@ -103,7 +102,6 @@ async function renderPosts() {
                 </div>
             </div>
 
-            {/* POST 3 */}
             <div className="post-card">
                 <div className="post-header">
                     <div className="post-info">
@@ -131,7 +129,6 @@ async function renderPosts() {
                 </div>
             </div>
 
-            {/* POST 4 */}
             <div className="post-card">
                 <div className="post-header">
                     <div className="post-info">
@@ -160,7 +157,6 @@ async function renderPosts() {
                 </div>
             </div>
 
-            {/* POST 5 */}
             <div className="post-card">
                 <div className="post-header">
                     <div className="post-info">
