@@ -25,12 +25,12 @@ ReactDOM.render(
             </div>
         </div>
         <div id="menu-mobile" className="menu-mobile escondido">
-            <a href="">Home</a>
-            <a href="">Trabalhos</a>
-            <a href="">Notificações</a>
-            <a href="">Chat</a>
-            <a href="">Perfil</a>
-            <a href="">Logout</a>
+            <a href="/pages/artist/feed-artist.html">Home</a>
+            <a href="/pages/artist/oportunidade-artist.html">Trabalhos</a>
+            <a href="/pages/artist/notificacoes-artist.html">Notificações</a>
+            <a href="/pages/artist/mensagens-artist.html">Chat</a>
+            <a href="/pages/artist/perfil-artist.html">Perfil</a>
+            <a href="../../index.html">Logout</a>
         </div>
     </div>,
     document.getElementById("menu-suspenso")
