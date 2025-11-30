@@ -1,0 +1,143 @@
+.notificacao{
+    color: #A020F0 !important;
+    border-bottom: #4C1E77 3px solid;
+    cursor: pointer;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+
+}
+.secao{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    margin: 6rem auto;
+    gap: 0rem;
+}
+.postagens{
+    height: 90%;
+    margin: 0rem 3rem 3rem 5rem;
+}
+#notificacoes{
+    width: 30%;
+    padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 6px 14px rgba(76, 30, 119, 0.18);
+    border: 1px solid rgba(76, 30, 119, 0.12);  
+    background: #ffffff;
+    border-radius: 16px;    
+}
+
+.filtro-notificacao {
+    display: flex;
+    gap: 1rem;
+    margin: 1em auto auto;
+}
+
+.filtro-notificacao button {
+    padding: 0.7em 1rem ;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #4C1E77;
+    background-color: transparent;
+    color: #4C1E77;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.filtro-notificacao button:hover {
+    color: #A020F0
+}
+
+.filtro-notificacao button.ativo {
+    background-color: #4C1E77;
+    color: white;
+    border-color: #4C1E77;
+}
+
+
+.lista-notificacoes {
+    display: flex;
+    flex-direction: column;
+}
+
+.pop-up-notificacao {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 1rem auto auto auto;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: transform 0.2s;
+    border: 1px solid rgba(76, 30, 119, 0.12);
+    border-left: 4px solid #A020F0;
+     
+}
+
+.pop-up-notificacao:hover {
+    transform: translateX(4px);
+    background-color: rgba(76, 30, 119, 0.18);
+}
+
+.pop-up-notificacao.nao-lida {
+    background-color: rgba(76, 30, 119, 0.10);
+    border-left-color: #4C1E77;
+}
+
+.filtro-notificacao button.ativo {
+    background-color: #4C1E77;
+    color: white;
+}
+
+.icone {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    color: #4C1E77;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.conteudo p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.tempo {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+
+@media (max-width: 768px) {
+    .secao {
+        flex-direction: column; 
+        margin: 4rem auto auto auto;
+        height: auto;
+    }
+    .feed-posts {
+        display: none;
+    }
+    #notificacoes {
+        width: 100% !important;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
+        padding: 1rem;
+    }
+    .lista-notificacoes {
+        width: 100%;
+    }
+}
