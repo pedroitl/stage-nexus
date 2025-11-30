@@ -18,7 +18,7 @@ body {
   max-width: 1500px;          
   min-height: 70vh;           
   background: #ffffff;
-  padding: 6em 10rem;         
+  padding: 5em 10rem;         
   border-radius: 26px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
   display: flex;
@@ -119,10 +119,15 @@ select:focus {
 }
 
 @media (max-width: 768px) {
+  #container{
+    display: flex;
+    justify-content: center;
+  }
   #container-react {
     flex-direction: column;
     max-width: 90%;
     padding: 2rem 1.3rem;
+    gap: 2rem;
   }
 
   .identidade,
@@ -131,7 +136,7 @@ select:focus {
   }
 
   .identidade img {
-    width: 150px;
+    width: 100px;
   }
 
   .outros-logins {
