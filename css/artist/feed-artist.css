@@ -106,33 +106,90 @@ body{
 
 .feed-container {
     width: 100%;
-    padding: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    margin-top: 5rem;
+    max-width: 900px;
+    margin: 6rem auto 3rem auto;
+    padding: 0 1rem;
+    font-family: "Inter", sans-serif;
 }
 
-.topo-feed {
-    margin-bottom: 2rem;
-}
-
-.topo-feed h2 {
-    font-size: 2rem;
-    color: #4C1E77;
-    font-weight: 700;
-}
-
-.feed-posts {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
 
 .post-card {
-    background: #fff;
-    border-radius: 12px;
+    background: #ffffff;
+    border-radius: 16px;
     padding: 1.5rem;
-    box-shadow: 0px 4px 10px rgba(76, 30, 119, 0.12);
+    margin-bottom: 1rem;
+    box-shadow: 0 6px 14px rgba(76, 30, 119, 0.18);
+    border: 1px solid rgba(76, 30, 119, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post-info {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.1rem;
+    color: #4C1E77;
+    font-weight: 600;
+}
+
+.post-info i {
+    font-size: 2rem;
+    color: #4C1E77;
+}
+
+.post-img {
+    width: 100%;
+    border-radius: 14px;
+    object-fit: cover;
+    max-height: 420px;
+    background: #f2e9ff;
+}
+
+.post-desc {
+    font-size: 1.05rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: #f4ebff;
+    color: #4C1E77;
+    padding: 0.25rem 0.9rem;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    font-weight: 600;
+    border: 1px solid #dfc8ff;
+}
+
+.post-acoes {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    padding-top: 0.6rem;
+}
+
+.post-acoes i {
+    font-size: 1.6rem;
+    color: #4C1E77;
+    cursor: pointer;
+}
+
+.post-acoes i:hover {
+    color: #A020F0;
 }
 
 .hamburguer {
@@ -189,5 +246,30 @@ body{
 
     .logo-busca {
         padding-left: 0.5rem;
+    }
+
+    .post-card {
+        padding: 1.2rem;
+        border-radius: 14px;
+    }
+
+    .post-info i {
+        font-size: 1.7rem;
+    }
+
+    .post-info span {
+        font-size: 1rem;
+    }
+
+    .post-img {
+        max-height: 300px;
+    }
+
+    .post-desc {
+        font-size: 0.95rem;
+    }
+
+    .post-acoes i {
+        font-size: 1.4rem;
     }
 }
