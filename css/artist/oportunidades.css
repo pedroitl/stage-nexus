@@ -1,0 +1,367 @@
+
+.conteudo-oportunidades {
+    max-width: 1120px;
+    margin: 6rem auto 3rem auto;
+    padding: 0 1.5rem;
+    font-family: "Inter", sans-serif;
+}
+
+.section-oportunidades {
+    margin-bottom: 1.5rem;
+}
+
+.oportunidades-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.text-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #1f2933;
+}
+
+.text-subtitle {
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+.section-oportunidades2 {
+    margin-bottom: 1.5rem;
+}
+
+.oportunidades2-busca {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #ffffff;
+    padding: 0.8rem 1rem;
+    border-radius: 14px;
+    box-shadow: 0 6px 14px rgba(76, 30, 119, 0.18);
+    border: 1px solid rgba(76, 30, 119, 0.12);
+}
+
+.oportunidades2-busca i {
+    font-size: 1.2rem;
+    color: #4C1E77;
+}
+
+
+.buscar {
+    flex: 1;
+    border: none;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.modalidade {
+    border-radius: 999px;
+    border: 1px solid #d1d5db;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.9rem;
+    background: #f9fafb;
+    color: #374151;
+}
+
+
+.lista-vagas {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-vaga {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.25rem;
+    box-shadow: 0 6px 14px rgba(76, 30, 119, 0.18);
+    border: 1px solid rgba(76, 30, 119, 0.12);
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+
+.card-vaga:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px rgba(76, 30, 119, 0.25);
+    border-color: #4C1E77;
+}
+
+.vaga-imagem {
+    width: 80px;                
+    height: 80px;
+    border-radius: 12px;        
+    overflow: hidden;           
+    flex-shrink: 0;             
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;        
+}
+
+.vaga-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;          
+    object-position: center;     
+    border-radius: 12px;
+}
+
+.conteudo-vaga {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.vaga-cabecalho {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.vaga-titulo {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.vaga-produtora {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.vaga-infos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    font-size: 0.88rem;
+    color: #4b5563;
+}
+
+.vaga-infos i {
+    font-size: 1rem;
+    margin-right: 4px;
+    color: #4C1E77; 
+}
+
+
+.vaga-infos span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.vaga-descricao {
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+.vaga-reqisitos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.chip {
+    background: #f4ebff;
+    color: #4C1E77;
+    padding: 0.2rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid #dfc8ff;
+}
+
+.vaga-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.4rem;
+    font-size: 0.82rem;
+}
+
+.vaga-publicado {
+    color: #9ca3af;
+}
+
+.vaga-status {
+    background: #e8fff1;
+    color: #166534;
+    padding: 0.25rem 0.8rem;
+    border-radius: 999px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.vaga-status::before {
+    content: "★";
+    font-size: 0.9rem;
+    color: #f59e0b;
+}
+
+.detalhes-vaga {
+    max-width: 1120px;
+    margin: 6rem auto 3rem auto;
+    padding: 2rem 2.2rem;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 6px 14px rgba(76, 30, 119, 0.18);
+    border: 1px solid rgba(76, 30, 119, 0.12);
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 2rem;
+    row-gap: 1.2rem;
+    font-family: "Inter", sans-serif;
+}
+
+.detalhes-acao-topo {
+    grid-column: 1 / -1;
+    margin-bottom: 0.5rem;
+}
+
+.botao-voltar {
+    border: none;
+    background: transparent;
+    color: #4C1E77;
+    font-weight: 500;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.botao-voltar i {
+    font-size: 1.2rem;
+}
+
+.detalhes-header-esquerda {
+    grid-column: 1 / 2;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.detalhes-imagem {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.detalhes-titulo {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.detalhes-produtora {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.detalhes-avaliacao {
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.detalhes-header-direita {
+    grid-column: 2 / 3;
+    text-align: right;
+    font-size: 0.9rem;
+    color: #4b5563;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.detalhes-bloco {
+    grid-column: 1 / -1;
+    margin-top: 0.4rem;
+}
+
+.detalhes-bloco h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4C1E77;
+    margin-bottom: 0.3rem;
+}
+
+.detalhes-bloco p {
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+.detalhes-bloco ul {
+    padding-left: 1.2rem;
+    margin-top: 0.2rem;
+}
+
+.detalhes-bloco li {
+    font-size: 0.9rem;
+    color: #374151;
+    margin-bottom: 0.2rem;
+}
+
+
+.detalhes-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.detalhes-acao {
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+}
+
+.botao-candidatar {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border-radius: 999px;
+    border: none;
+    background: #A020F0;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.botao-candidatar:hover {
+    background: #4C1E77;
+}
+@media (max-width: 768px) {
+    .conteudo-oportunidades {
+        margin-top: 5.5rem;
+        padding: 0 1rem;
+    }
+
+    .oportunidades2-busca {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .card-vaga {
+        grid-template-columns: 1fr;
+    }
+
+    .vaga-imagem img {
+        width: 100%;
+        height: 180px;
+    }
+
+    .detalhes-vaga {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1.2rem;
+    }
+
+    .detalhes-header-direita {
+        text-align: left;
+        margin-top: 0.5rem;
+    }
+}
