@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+.pagina-busca {
+    max-width: 900px;
+    margin: 7rem auto 2rem auto;
+    padding: 0 1rem;
+}
+
+.titulo-busca {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4C1E77;
+    margin-bottom: 2rem;
+}
+
+.resultados-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.resultado-card {
+    background: #ffffff;
+    padding: 1.2rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0px 4px 12px rgba(76, 30, 119, 0.15);
+}
+
+.foto-perfil {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info h3 {
+    font-size: 1.2rem;
+    color: #4C1E77;
+    font-weight: 700;
+}
+
+.info p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.btn-ver {
+    margin-left: auto;
+    background: #4C1E77;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.btn-ver:hover {
+  background: #5b26a0;
+  transform: translateY(-2px);
+  box-shadow: 0 0.4rem 0.8rem rgba(76, 30, 119, 0.28);
+}
+
+.btn-ver-mais {
+    width: 100%;
+    max-width: 18rem;
+    padding: 0.75rem 1.2rem;
+    margin: 1.5rem auto 0.6rem auto;
+    background: #4C1E77;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    box-shadow: 0 0.3rem 0.6rem rgba(76, 30, 119, 0.2);
+}
+
+.btn-ver-mais:hover {
+  background: #5b26a0;
+  transform: translateY(-2px);
+  box-shadow: 0 0.4rem 0.8rem rgba(76, 30, 119, 0.28);
+}

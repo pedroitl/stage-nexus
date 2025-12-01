@@ -6,7 +6,7 @@ ReactDOM.render(
             </div>
             <div className="busca">
                 <input placeholder="Buscar perfis..."></input>
-                <a href=""><i class="bi bi-search"></i></a>
+                <a href="../../pages/artist/busca-artist.html"><i class="bi bi-search"></i></a>
             </div>
             <button id="btn-menu" className="hamburguer">
                 <i class="bi bi-list"></i>
