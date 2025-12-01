@@ -9,7 +9,7 @@ ReactDOM.render(
                 <a href="../../pages/artist/busca-artist.html"><i class="bi bi-search"></i></a>
             </div>
             <button id="btn-menu" className="hamburguer">
-                <i class="bi bi-list"></i>
+                <i className="bi bi-list"></i>
             </button>
         </div>
         <div className="barra-logout">
