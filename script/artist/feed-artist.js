@@ -21,7 +21,7 @@ ReactDOM.render(
                 <a href="/pages/artist/perfil-artist.html" className="perfil"><i class="bi bi-person"></i></a>
             </div>
             <div className="logout">
-                <a href="/pages/login.html"><i class="bi bi-box-arrow-right"></i></a>
+                <a href="../../index.html"><i class="bi bi-box-arrow-right"></i></a>
             </div>
         </div>
         <div id="menu-mobile" className="menu-mobile escondido">
@@ -46,6 +46,18 @@ btnMenu.addEventListener("click", () => {
 async function renderPosts() {
     ReactDOM.render(
         <div className="postagens">
+            <div className="criar-post">
+                <div className="criar-post-topo">
+                    <i className="bi bi-person-circle"></i>
+                    <input type="text" placeholder="O que você está pensando?" className="input-post"></input>
+                </div>
+
+                <div className="criar-post-acoes">
+                    <button className="btn-acao"><i className="bi bi-image"></i> Foto</button>
+                    <button className="btn-acao"><i className="bi bi-music-note-beamed"></i> Áudio</button>
+                    <button className="btn-acao"><i className="bi bi-camera-video"></i> Vídeo</button>
+                </div>
+            </div>
             <div className="post-card">
                 <div className="post-header">
                     <div className="post-info">

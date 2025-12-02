@@ -53,8 +53,8 @@ body{
     max-width: 720px;
     padding: 0.8em;
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.295);
-    border: 1px solid #00000010;
-    border-radius: 8px;
+    border: 1px solid #d7c7e7;
+    border-radius: 2rem;
 }
 
 .busca input{
@@ -231,6 +231,68 @@ body{
     display: none;
 }
 
+.criar-post {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 0.3rem 1rem rgba(76, 30, 119, 0.12);
+  margin-bottom: 1.5rem;
+}
+
+.criar-post-topo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.criar-post-topo i {
+  font-size: 2rem;
+  color: #4C1E77;
+}
+
+.input-post {
+  flex-grow: 1;
+  padding: 0.7rem 1rem;
+  border: 1px solid #d7c7e7;
+  border-radius: 2rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+.input-post:focus {
+  border-color: #4C1E77;
+}
+
+.criar-post-acoes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  gap: 0.8rem;
+}
+
+.btn-acao {
+  flex: 1;
+  background: #faf7ff;
+  border: 1px solid #e6dff0;
+  border-radius: 0.6rem;
+  padding: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #4C1E77;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.btn-acao:hover {
+  background: #ede4fa;
+}
+
+
 @media (max-width: 768px) {
      .hamburguer {
         display: block;
@@ -272,4 +334,13 @@ body{
     .post-acoes i {
         font-size: 1.4rem;
     }
+
+    .btn-acao {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+
+  .criar-post-topo i {
+    font-size: 1.7rem;
+  }
 }
