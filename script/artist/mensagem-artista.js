@@ -80,7 +80,7 @@ const conversasIniciais = [
   },
   {
     id: 5,
-    nome: "univesal",
+    nome: "Univesal",
     foto:"../../assets/mensagem/universal.jpg",
     ultimaMensagem: "ok! mau vejo a hora.",
     mensagens: [
