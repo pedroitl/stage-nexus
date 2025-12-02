@@ -1,0 +1,498 @@
+.perfil{
+    color: #A020F0 !important;
+    border-bottom: #4C1E77 3px solid;
+    cursor: pointer;
+    
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+}
+
+.container-perfil {
+    width: 60%;
+    height: auto;
+    margin: 6rem auto;
+    font-family: "Inter", sans-serif;
+}
+
+.perfil-capa {
+    height:25vh;
+    border-radius: 12px 12px 0px 0px;
+    background: linear-gradient(90deg, #4C1E77, #A020F0);
+}
+
+.perfil-info {
+    position: relative;
+    background: white;
+    padding: 30px;
+    border-radius: 0px 0px 12px 12px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: auto;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.perfil-foto {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0px 4px 4px rgba(76, 30, 119, 0.384) ;
+    background: #ddd;
+}
+
+.perfil-dados h2 {
+    font-size: 20px;
+    
+}
+
+.perfil-arroba {
+    color: #7e7e7e;
+    display: block;
+    font-size: 14px;
+}
+
+.perfil-categoria {
+    display: inline-block;
+    margin-top: 4px;
+    background: #e9d7ff;
+    color: #6d21c9;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.perfil-bio {
+    margin: 6px 0;
+    color: #555;
+}
+
+.perfil-estatisticas {
+    display: flex;
+    gap: 18px;
+    margin-top: 8px;
+}
+
+.perfil-estatisticas span {
+    color: #444;
+    font-size: 14px;
+}
+
+
+.btn-editar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.2s;
+    z-index: 10;
+}
+
+.btn-editar:hover {
+    background: #f3f3f3;
+}
+
+
+.perfil-abas {
+    margin-top: 25px;
+    display: flex;
+    gap: 35px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 6px;
+}
+
+.aba {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-bottom: 8px;
+    font-size: 15px;
+    color: #777;
+}
+
+.aba.ativa {
+    font-weight: bold;
+    color: #6d21c9;
+    border-bottom: 3px solid #6d21c9;
+}
+
+.perfil-publicacoes {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.perfil-publicacoes img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.perfil-trabalhos {
+    margin-top: 20px;
+}
+
+.trabalho-card {
+    padding: 15px;
+    border-radius: 10px;
+    background: #f8f5ff;
+    border: 1px solid #e0d4ff;
+    margin-bottom: 12px;
+}
+
+.trabalho-card h4 {
+    margin-bottom: 4px;
+    color: #4C1E77;
+}
+
+.perfil-sobre {
+    margin-top: 20px;
+}
+
+.perfil-sobre h3, 
+.perfil-trabalhos h3 {
+    color: #4C1E77;
+    margin-bottom: 10px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.trabalho-card {
+    background: white;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: 0.2s;
+}
+
+.trabalho-card:hover {
+    transform: translateY(-2px);
+}
+
+.trabalho-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.trabalho-info h4 {
+    margin-bottom: 3px;
+    color: #4C1E77;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.trabalho-categoria {
+    display: block;
+    color: #888;
+    font-size: 14px;
+}
+
+.trabalho-data {
+    display: block;
+    color: #666;
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+.trabalho-ver {
+    margin-left: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #9a9a9a;
+    font-size: 20px;
+}
+
+.btn-add-trabalho {
+    width: 30%;
+    background: #6d21c9;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.2s;
+    margin-left: 20rem;
+    margin-bottom: 1rem;
+}
+
+.btn-add-trabalho:hover {
+    background: #5518a0;
+}
+
+.modal {
+    background: #fff;
+    width: 90%;
+    max-width: 700px;
+    max-height: 90vh;      
+    overflow-y: auto;      
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    
+}
+.modal::-webkit-scrollbar {
+    width: 6px;
+}
+.modal::-webkit-scrollbar-thumb {
+    background: rgba(76, 30, 119, 0.12);
+    border-radius: 6px;
+}
+.modal fieldset {
+    border: 1px solid rgba(76, 30, 119, 0.12);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+}
+.modal legend {
+    font-weight: 600;
+    color: #A020F0;
+    display: flex;
+    flex-direction: column;
+}
+.modal h2 {
+    color: #4C1E77;
+}
+
+.modal input,
+.modal textarea {
+    width: 100%;
+    padding: 0.6em;
+    border-radius: 8px;
+    border: 1px solid rgba(76, 30, 119, 0.12);
+}
+
+.modal input:focus,
+.modal textarea:focus,
+.modal select:focus {
+    outline: none;
+    border: 1px solid #4C1E77;
+}
+.modal textarea {
+    height: 8em;
+}
+
+.modal-btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.modal select {
+    
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: white;
+}
+
+.btn-cancelar {
+    background: #ddd;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-salvar {
+    background: #4C1E77;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.grupo-bloco {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.item-lista {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 6px 0;
+}
+
+.item-lista input {
+    flex: 1;
+}
+
+.btn-adicionar-item {
+    width: 25%;
+    margin-top: 8px;
+    padding: 8px;
+    background: #4C1E77;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-remover-item {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+@media (min-width: 769px) {
+
+    .perfil-info {
+        position: relative;
+    }
+
+    .btn-editar {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-perfil {
+        width: 95%;
+        margin: 4rem auto;
+        padding: 0;
+    }
+
+    .perfil-capa {
+        height: 18vh;
+    }
+    .perfil-foto {
+        width: 4rem;
+        height: 4rem;
+    }
+    .perfil-info {
+        flex-direction: row;     
+        align-items: center;
+        gap: 18px;
+        text-align: left;
+    }
+
+    .btn-editar {
+        position: absolute;      
+        top: 20px;
+        right: 20px;
+        width: auto;            
+        max-width: none;
+        margin: 0;
+        order: 0;                
+    }
+
+    .perfil-abas {
+        gap: 20px;
+        justify-content: center;
+        font-size: 14px;
+    }
+
+   
+    .perfil-publicacoes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+   
+    .perfil-trabalhos,
+    .perfil-sobre {
+        margin-top: 15px;
+    }
+
+    .modal {
+        width: 95%;
+        max-width: 95%;
+        max-height: 85vh;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .modal fieldset {
+        padding: 12px;
+    }
+
+    .modal input,
+    .modal textarea,
+    .modal select {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .modal-btns {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-cancelar,
+    .btn-salvar {
+        width: 100%;
+        padding: 10px;
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .perfil-publicacoes {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .modal {
+        padding: 12px;
+        max-height: 80vh;
+    }
+
+    .modal input,
+    .modal textarea,
+    .modal select {
+        font-size: 14px;
+    }
+
+    .btn-cancelar,
+    .btn-salvar {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
