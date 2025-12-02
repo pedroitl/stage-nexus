@@ -42,6 +42,8 @@ function Notificacoes() {
 }
 
 ReactDOM.render(
-    <Notificacoes/>,
+    <div className="sidebar-notificacoes">
+        <Notificacoes />
+    </div>,
     document.getElementById("notificacoes")
 );

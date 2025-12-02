@@ -2,7 +2,7 @@ ReactDOM.render(
     <div className="menu-suspenso-producer">
         <div className="logo-busca">
             <div className="logo">
-                <a href="/pages/artist/feed-artist.html"><img src="/assets/logotipo-branco.png" alt=""></img></a>
+                <a href="/pages/producer/feed-producer.html"><img src="/assets/logotipo-branco.png" alt=""></img></a>
             </div>
             <div className="busca">
                 <input placeholder="Buscar perfis..."></input>
