@@ -45,5 +45,5 @@ ReactDOM.render(
     <div className="sidebar-notificacoes">
         <NotificacoesProdutor />
     </div>,
-    document.getElementById("notificacoes-produtor")
+    document.getElementById("notificacoes-producer")
 );

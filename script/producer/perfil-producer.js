@@ -5,14 +5,23 @@ let novoTrabalho = {};
 // dados editáveis do usuário
 let perfilDados = {
     nome: "Sing Produções",
-    arroba: "@singproducoe",
-    dataNascimento: "25/10/2000",
-    categoria: "Produção de eventos",
-    bio: "Produtora de eventos voltada para formaturas",
-    sobreTexto: "Sing produções está a 15 anos no mercado das formaturas, realizando experiências inesqueciveis",
-    habilidades: [],
-    premios: []
+    arroba: "@singproducoes",
+    dataNascimento: "12/03/2010",
+    categoria: "Produção de Eventos",
+    bio: "Criando experiências que viram histórias.",
+    sobreTexto: "Somos uma produtora especializada em formaturas e grandes eventos. Há mais de 15 anos no mercado, entregamos emoção, estrutura e impacto.",
+    habilidades: [
+        "Formaturas",
+        "Eventos Corporativos",
+        "Festivais",
+        "Decoração e Ambientação"
+    ],
+    premios: [
+        "Melhor produtora regional 2023",
+        "Prêmio Excelência em Produção de Eventos 2022"
+    ]
 };
+
 
 function renderizarPerfil() {
     ReactDOM.render(
@@ -78,21 +87,20 @@ function renderizarPerfil() {
                             </div>
 
                             <p className="post-legenda">
-                                Festa meio Med dos estudantes da Unifacisa🔥  
-                                <span className="hashtags">#5/10 #meioMed</span>
+                                Bastidores da nossa última formatura — mais de 5 mil pessoas celebrando juntas 🎆  
+                                <span className="hashtags">#Formatura2024 #EventoInesquecível</span>
                             </p>
-                        </div>
 
-                        <div className="post-imagem">
-                            <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg" />
-                        </div>
-
-                        <div className="post-conteudo">
-                            <div className="post-info">
-                                <span>243 curtidas</span>
-                                <span>18 comentários</span>
-                                <span>5 compartilhamentos</span>
+                            <div className="post-imagem">
+                                <img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg" />
                             </div>
+
+                            <div className="post-info">
+                                <span>950 curtidas</span>
+                                <span>42 comentários</span>
+                                <span>8 compartilhamentos</span>
+                            </div>
+
 
                             <div className="post-acoes">
                                 <button><i className="bi bi-heart"></i> Curtir</button>
@@ -117,21 +125,20 @@ function renderizarPerfil() {
                             </div>
 
                             <p className="post-legenda">
-                                Minha primeira aula de sax  
-                                <span className="hashtags"> #Sax #Jazz</span>
+                                Montagem de palco para o Festival Universitário — sonho se ergue peça por peça 🔧🎤  
+                                <span className="hashtags">#Backstage #Produção</span>
                             </p>
-                        </div>
 
-                        <div className="post-imagem">
-                            <img src="https://images.pexels.com/photos/164936/pexels-photo-164936.jpeg" />
-                        </div>
-
-                        <div className="post-conteudo">
-                            <div className="post-info">
-                                <span>367 curtidas</span>
-                                <span>10 comentários</span>
-                                <span>2 compartilhamentos</span>
+                            <div className="post-imagem">
+                                <img src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg" />
                             </div>
+
+                            <div className="post-info">
+                                <span>720 curtidas</span>
+                                <span>19 comentários</span>
+                                <span>4 compartilhamentos</span>
+                            </div>
+
 
                             <div className="post-acoes">
                                 <button><i className="bi bi-heart"></i> Curtir</button>
@@ -156,21 +163,20 @@ function renderizarPerfil() {
                             </div>
 
                             <p className="post-legenda">
-                                Vem aí música nova  
-                                <span className="hashtags"> #Lançamento</span>
+                                Entrega completa de estrutura para o Evento Tech Summit. Toda a cenografia foi feita pela nossa equipe.  
+                                <span className="hashtags">#Eventos #ProduçãoProfissional</span>
                             </p>
-                        </div>
 
-                        <div className="post-imagem">
-                            <img src="https://images.pexels.com/photos/164879/pexels-photo-164879.jpeg" />
-                        </div>
-
-                        <div className="post-conteudo">
-                            <div className="post-info">
-                                <span>1050 curtidas</span>
-                                <span>50 comentários</span>
-                                <span>15 compartilhamentos</span>
+                            <div className="post-imagem">
+                                <img src="https://images.pexels.com/photos/4439425/pexels-photo-4439425.jpeg" />
                             </div>
+
+                            <div className="post-info">
+                                <span>1450 curtidas</span>
+                                <span>63 comentários</span>
+                                <span>12 compartilhamentos</span>
+                            </div>
+
 
                             <div className="post-acoes">
                                 <button><i className="bi bi-heart"></i> Curtir</button>
@@ -200,10 +206,11 @@ function renderizarPerfil() {
 
                         <div className="trabalho-header">
                             <div className="trabalho-titulo-area">
-                                <h4>Festival de Verão 2024</h4>
+                                <h4>Formatura Medicina 2024</h4>
+
                                 <div className="trabalho-tags">
-                                    <span className="trabalho-categoria">Show</span>
-                                    <span className="trabalho-data">Janeiro 2024</span>
+                                    <span className="trabalho-categoria">Formatura</span>
+                                    <span className="trabalho-data">Outubro 2024</span>
                                 </div>
                             </div>
 
@@ -217,12 +224,12 @@ function renderizarPerfil() {
                         </div>
 
                         <p className="trabalho-descricao">
-                            Performance como baterista principal em festival com 3 dias de duração
+                            Produção completa do evento: palco, iluminação, sonorização, cerimonial e cenografia.
                         </p>
 
                         <div className="trabalho-cliente">
                             <i class="bi bi-building"></i>
-                            <span>Cliente: Produtora XYZ</span>
+                            <span>Cliente: Universidade Federal do Cariri</span>
                         </div>
 
                     </div>
@@ -230,18 +237,17 @@ function renderizarPerfil() {
                         
                         <div className="trabalho-img-wrapper">
                             <img
-                                src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg"
-                                alt="Show"
+                                src="https://images.pexels.com/photos/8093035/pexels-photo-8093035.jpeg"
                                 className="trabalho-img"
                             />
                         </div>
 
                         <div className="trabalho-header">
                             <div className="trabalho-titulo-area">
-                                <h4>Festival de Verão 2024</h4>
+                                <h4>Festival Universitário 2024</h4>
                                 <div className="trabalho-tags">
-                                    <span className="trabalho-categoria">Show</span>
-                                    <span className="trabalho-data">Janeiro 2024</span>
+                                    <span className="trabalho-categoria">Show / Festival</span>
+                                    <span className="trabalho-data">Julho 2024</span>
                                 </div>
                             </div>
 
@@ -255,12 +261,12 @@ function renderizarPerfil() {
                         </div>
 
                         <p className="trabalho-descricao">
-                            Performance como baterista principal em festival com 3 dias de duração
+                            Montagem de palco, luz, passarela lateral e coordenação de backstage de 12 atrações.
                         </p>
 
                         <div className="trabalho-cliente">
                             <i class="bi bi-building"></i>
-                            <span>Cliente: Produtora XYZ</span>
+                            <span>Cliente: Diretório Estudantil UFCG</span>
                         </div>
 
                     </div>
@@ -268,7 +274,7 @@ function renderizarPerfil() {
                         
                         <div className="trabalho-img-wrapper">
                             <img
-                                src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg"
+                                src="https://images.pexels.com/photos/3184304/pexels-photo-3184304.jpeg" 
                                 alt="Show"
                                 className="trabalho-img"
                             />
@@ -276,10 +282,10 @@ function renderizarPerfil() {
 
                         <div className="trabalho-header">
                             <div className="trabalho-titulo-area">
-                                <h4>Festival de Verão 2024</h4>
+                                <h4> Evento Corporativo InovaTech </h4>
                                 <div className="trabalho-tags">
-                                    <span className="trabalho-categoria">Show</span>
-                                    <span className="trabalho-data">Janeiro 2024</span>
+                                    <span className="trabalho-categoria">Evento Corporativo</span>
+                                    <span className="trabalho-data">Março 2024</span>
                                 </div>
                             </div>
 
@@ -293,12 +299,12 @@ function renderizarPerfil() {
                         </div>
 
                         <p className="trabalho-descricao">
-                            Performance como baterista principal em festival com 3 dias de duração
+                            Produção estratégica com cenografia modular, projeção mapeada e recepção premium.
                         </p>
 
                         <div className="trabalho-cliente">
                             <i class="bi bi-building"></i>
-                            <span>Cliente: Produtora XYZ</span>
+                            <span>Cliente: InovaTech Global</span>
                         </div>
 
                     </div>
