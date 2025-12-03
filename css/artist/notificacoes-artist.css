@@ -79,11 +79,11 @@ body{
 
 .pop-up-notificacao:hover {
     transform: translateX(4px);
-    background-color: rgba(76, 30, 119, 0.18);
+    background-color: rgba(101, 35, 163, 0.18);
 }
 
 .pop-up-notificacao.nao-lida {
-    background-color: rgba(76, 30, 119, 0.10);
+    background-color: rgba(109, 45, 168, 0.1);
     border-left-color: #4C1E77;
 }
 
