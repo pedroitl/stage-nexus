@@ -1,6 +1,6 @@
-
-
 function PaginaOportunidadesProdutor() {
+
+    const [modalAberto, setModalAberto] = React.useState(false);
 
     const produtores = [
         {
@@ -85,17 +85,206 @@ function PaginaOportunidadesProdutor() {
         alert(`Convite enviado para ${produtor.nome}!`);
     }
 
+    function handleSubmit(e) {
+        e.preventDefault();
+
+        const form = e.target;
+
+        const titulo = form.titulo.value.trim();
+        const estilo = form.estilo.value.trim();
+        const tipoEvento = form.tipoEvento.value.trim();
+        const local = form.local.value.trim();
+        const perfilCantor = form.perfilCantor.value.trim();
+
+        if (!titulo || !estilo || !tipoEvento || !local || !perfilCantor) {
+            alert("Preencha todos os campos obrigatórios (*).");
+            return;
+        }
+
+        alert("Oportunidade publicada com sucesso!");
+
+        form.reset();
+        setModalAberto(false);
+    }
+
     return (
         <div className="conteudo-oportunidades-produtor">
 
             <section className="section-oportunidades">
-                <div className="oportunidades-title">
-                    <h1 className="text-title">Encontre Artistas</h1>
-                    <p className="text-subtitle">
-                        Descubra e conecte-se com artistas talentosos para seus projetos
-                    </p>
+                <div className="oportunidades-title topo-oportunidades">
+                    <div>
+                        <h1 className="text-title">Encontre Artistas</h1>
+                        <p className="text-subtitle">
+                            Descubra e conecte-se com artistas talentosos para seus projetos
+                        </p>
+                    </div>
+
+                    <button
+                        className="btn-nova-oportunidade-topo"
+                        onClick={() => setModalAberto(true)}
+                    >
+                        Cadastrar oportunidade
+                    </button>
                 </div>
             </section>
+
+            {modalAberto && (
+                <div className="fundo-modal-oportunidade">
+                    <div className="card-oportunidade">
+
+                        <div className="cabecalho-card-oportunidade">
+                            <div>
+                                <h2>Cadastrar oportunidade para cantores</h2>
+                                <p>
+                                    Preencha os detalhes da vaga para que cantores interessados possam se candidatar.
+                                </p>
+                            </div>
+
+                            <button
+                                type="button"
+                                className="botao-fechar-modal"
+                                onClick={() => setModalAberto(false)}
+                            >
+                                ×
+                            </button>
+                        </div>
+
+                        <form className="formulario-oportunidade" onSubmit={handleSubmit}>
+                            <div className="linha-formulario">
+                                <div className="grupo-formulario largura-total">
+                                    <label htmlFor="titulo">Título da oportunidade *</label>
+                                    <input
+                                        id="titulo"
+                                        name="titulo"
+                                        type="text"
+                                        placeholder="Ex: Cantor(a) para show em festival de verão"
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="linha-formulario">
+                                <div className="grupo-formulario">
+                                    <label htmlFor="estilo">Estilo musical desejado *</label>
+                                    <input
+                                        id="estilo"
+                                        name="estilo"
+                                        type="text"
+                                        placeholder="Ex: Pop, Sertanejo, Gospel, MPB..."
+                                    />
+                                </div>
+
+                                <div className="grupo-formulario">
+                                    <label htmlFor="tipoEvento">Tipo de evento *</label>
+                                    <select id="tipoEvento" name="tipoEvento" defaultValue="">
+                                        <option value="" disabled>Selecione...</option>
+                                        <option value="show">Show ao vivo</option>
+                                        <option value="gravacao">Gravação em estúdio</option>
+                                        <option value="feat">Feat / participação</option>
+                                        <option value="turne">Turnê</option>
+                                        <option value="evento_privado">Evento privado</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div className="linha-formulario">
+                                <div className="grupo-formulario">
+                                    <label htmlFor="local">Local do show/gravação *</label>
+                                    <input
+                                        id="local"
+                                        name="local"
+                                        type="text"
+                                        placeholder="Ex: São Paulo - SP, estúdio próprio, etc."
+                                    />
+                                </div>
+
+                                <div className="grupo-formulario">
+                                    <label htmlFor="periodo">Data ou período</label>
+                                    <input
+                                        id="periodo"
+                                        name="periodo"
+                                        type="text"
+                                        placeholder="Ex: 15/02/2026 ou Junho–Julho 2026"
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="linha-formulario">
+                                <div className="grupo-formulario">
+                                    <label htmlFor="cache">Faixa de cachê (opcional)</label>
+                                    <input
+                                        id="cache"
+                                        name="cache"
+                                        type="text"
+                                        placeholder="Ex: R$ 2.000 + despesas"
+                                    />
+                                </div>
+
+                                <div className="grupo-formulario">
+                                    <label htmlFor="contratacao">Formato de contratação</label>
+                                    <select id="contratacao" name="contratacao" defaultValue="">
+                                        <option value="" disabled>Selecione...</option>
+                                        <option value="show_unico">Show único</option>
+                                        <option value="temporario">Projeto temporário</option>
+                                        <option value="fixo">Parceria fixa</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div className="linha-formulario">
+                                <div className="grupo-formulario largura-total">
+                                    <label htmlFor="perfilCantor">
+                                        Perfil do cantor desejado (voz, experiência, presença de palco) *
+                                    </label>
+                                    <textarea
+                                        id="perfilCantor"
+                                        name="perfilCantor"
+                                        rows="3"
+                                        placeholder="Ex: Voz masculina/feminina, experiência com palco, boa presença de público, etc."
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="linha-formulario">
+                                <div className="grupo-formulario largura-total">
+                                    <label htmlFor="materiais">Materiais que o cantor deve enviar</label>
+                                    <input
+                                        id="materiais"
+                                        name="materiais"
+                                        type="text"
+                                        placeholder="Ex: Link do Spotify, vídeos ao vivo, redes sociais..."
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="linha-formulario">
+                                <div className="grupo-formulario largura-total">
+                                    <label htmlFor="observacoes">Observações adicionais</label>
+                                    <textarea
+                                        id="observacoes"
+                                        name="observacoes"
+                                        rows="3"
+                                        placeholder="Ex: Ensaios obrigatórios, ajuda de custo, hospedagem..."
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="acoes-formulario">
+                                <button
+                                    type="button"
+                                    className="botao-cancelar"
+                                    onClick={() => setModalAberto(false)}
+                                >
+                                    Cancelar
+                                </button>
+
+                                <button type="submit" className="botao-publicar">
+                                    Publicar oportunidade
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            )}
 
             <section className="section-oportunidades2">
                 <form className="oportunidades2-busca">
@@ -193,8 +382,10 @@ function PaginaOportunidadesProdutor() {
                                     <i className="bi bi-send"></i> Enviar convite
                                 </button>
 
-                                <button className="btn-ver-perfil"
-                                onClick={(() => alert("Perfil não esta registrado ainda!"))}>
+                                <button
+                                    className="btn-ver-perfil"
+                                    onClick={() => alert("Perfil não está registrado ainda!")}
+                                >
                                     Ver perfil
                                 </button>
                             </div>

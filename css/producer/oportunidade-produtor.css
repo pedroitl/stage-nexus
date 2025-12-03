@@ -15,6 +15,14 @@
     gap: 0.25rem;
 }
 
+.topo-oportunidades {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
 .text-title {
     font-size: 1.7rem;
     font-weight: 700;
@@ -24,6 +32,25 @@
 .text-subtitle {
     font-size: 0.95rem;
     color: #6b7280;
+}
+
+.btn-nova-oportunidade-topo {
+    background: linear-gradient(90deg, #A020F0, #4C1E77);
+    border: none;
+    color: #ffffff;
+    padding: 0.6rem 1.5rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(76, 30, 119, 0.35);
+    transition: 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-nova-oportunidade-topo:hover {
+    filter: brightness(1.08);
+    transform: translateY(-2px);
 }
 
 .section-oportunidades2 {
@@ -68,7 +95,6 @@
     background: #f9fafb;
     color: #374151;
 }
-
 
 .lista-produtores {
     display: grid;
@@ -323,6 +349,156 @@
     filter: brightness(1.07);
 }
 
+
+.fundo-modal-oportunidade {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    z-index: 999;
+}
+
+.card-oportunidade {
+    width: 100%;
+    max-width: 720px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 1.5rem 1.7rem;
+    box-shadow: 0 18px 40px rgba(76, 30, 119, 0.4);
+    border: 1px solid rgba(76, 30, 119, 0.17);
+}
+
+.cabecalho-card-oportunidade {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.cabecalho-card-oportunidade h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.cabecalho-card-oportunidade p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-top: 0.2rem;
+}
+
+.botao-fechar-modal {
+    border: none;
+    background: transparent;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #6b7280;
+    line-height: 1;
+    padding: 0.2rem 0.4rem;
+    border-radius: 999px;
+}
+
+.botao-fechar-modal:hover {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+.formulario-oportunidade {
+    margin-top: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.linha-formulario {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.grupo-formulario {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 180px;
+}
+
+.largura-total {
+    flex-basis: 100%;
+}
+
+.formulario-oportunidade label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.formulario-oportunidade input,
+.formulario-oportunidade select,
+.formulario-oportunidade textarea {
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    padding: 0.55rem 0.7rem;
+    font-size: 0.9rem;
+    outline: none;
+    background: #f9fafb;
+    color: #111827;
+    resize: vertical;
+}
+
+.formulario-oportunidade input:focus,
+.formulario-oportunidade select:focus,
+.formulario-oportunidade textarea:focus {
+    border-color: #4C1E77;
+    box-shadow: 0 0 0 1px rgba(76, 30, 119, 0.25);
+    background: #ffffff;
+}
+
+.acoes-formulario {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.7rem;
+    margin-top: 0.5rem;
+}
+
+.botao-cancelar {
+    border-radius: 999px;
+    padding: 0.55rem 1.3rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    color: #374151;
+    transition: 0.2s ease;
+}
+
+.botao-cancelar:hover {
+    background: #f3f4f6;
+}
+
+.botao-publicar {
+    border-radius: 999px;
+    padding: 0.55rem 1.6rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(90deg, #A020F0, #4C1E77);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(76, 30, 119, 0.32);
+    transition: 0.2s ease;
+}
+
+.botao-publicar:hover {
+    filter: brightness(1.07);
+    transform: translateY(-1px);
+}
+
 @media (max-width: 900px) {
     .lista-produtores {
         grid-template-columns: 1fr;
@@ -351,5 +527,20 @@
     .btn-enviar-convite,
     .btn-ver-perfil {
         width: 100%;
+    }
+
+    .topo-oportunidades {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-nova-oportunidade-topo {
+        align-self: stretch;
+        text-align: center;
+    }
+
+    .fundo-modal-oportunidade {
+        align-items: flex-start;
+        padding-top: 5rem;
     }
 }
