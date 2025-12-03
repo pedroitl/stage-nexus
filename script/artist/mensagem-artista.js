@@ -1,5 +1,3 @@
-
-
 const conversasIniciais = [
   {
     id: 1,
@@ -26,7 +24,7 @@ const conversasIniciais = [
   {
     id: 3,
     nome: "MK music",
-    foto:"../../assets/mensagem/MKmusic.png",
+    foto: "../../assets/mensagem/MKmusic.png",
     ultimaMensagem: "Show! Confirmo presença para o evento",
     mensagens: [
       { id: 1, de: "outro", texto: "Show! Confirmo presença para o evento" },
@@ -35,7 +33,7 @@ const conversasIniciais = [
   {
     id: 4,
     nome: "Work Show",
-    foto:"../../assets/mensagem/workShow.jpg",
+    foto: "../../assets/mensagem/workShow.jpg",
     ultimaMensagem: "otimo! vamos marca a entrevista.",
     mensagens: [
       { id: 1, de: "outro", texto: "Otimo! vamos marca a entrevista." },
@@ -45,7 +43,7 @@ const conversasIniciais = [
   {
     id: 5,
     nome: "Univesal",
-    foto:"../../assets/mensagem/universal.jpg",
+    foto: "../../assets/mensagem/universal.jpg",
     ultimaMensagem: "ok! mau vejo a hora.",
     mensagens: [
       { id: 1, de: "outro", texto: "ok! mau vejo a hora." },
@@ -55,7 +53,7 @@ const conversasIniciais = [
   {
     id: 6,
     nome: "GR6 explode",
-    foto:"../../assets/mensagem/gr6.jpg",
+    foto: "../../assets/mensagem/gr6.jpg",
     ultimaMensagem: "e isso ai, confiança que vai da certo.",
     mensagens: [
       { id: 1, de: "outro", texto: "e isso ai, confiança que vai da certo." },
@@ -65,7 +63,7 @@ const conversasIniciais = [
   {
     id: 7,
     nome: "Som Livre",
-    foto:"../../assets/mensagem/Logo_of_Som_Livre_(2009).svg",
+    foto: "../../assets/mensagem/Logo_of_Som_Livre_(2009).svg",
     ultimaMensagem: "Oi! Vamos marca a entrevista.",
     mensagens: [
       { id: 1, de: "outro", texto: "Oi! Vamos marca a entrevista." },
@@ -76,46 +74,86 @@ const conversasIniciais = [
 
 function MensagemArtista() {
   const [conversas, setConversas] = React.useState(conversasIniciais);
-  const [conversaSelecionadaId, setConversaSelecionadaId] = React.useState(conversasIniciais[0].id);
+  const [conversaSelecionadaId, setConversaSelecionadaId] = React.useState(null);
 
-  const [textoMensagem,  setTextoMensagem] = React.useState("");
+  const [textoMensagem, setTextoMensagem] = React.useState("");
 
   const conversaSelecionada = conversas.find(
     (c) => c.id === conversaSelecionadaId
   );
 
-  function EnviarMensagem(){
+  function EnviarMensagem() {
     const texto = textoMensagem.trim();
     if (!texto) return;
 
     const novaMensagem = {
-    id: Date.now(),
-    de: "me",
-    texto: texto,
-  };
+      id: Date.now(),
+      de: "me",
+      texto: texto,
+    };
 
-  const novasConversas = conversas.map((conversa)=>{
-    if(conversa.id === conversaSelecionadaId){
-      return {
-        ...conversa,
-        mensagens: [...conversa.mensagens, novaMensagem],
-        ultimaMensagem:texto,
-      };
-    }
-    return conversa;
-  });
+    const novasConversas = conversas.map((conversa) => {
+      if (conversa.id === conversaSelecionadaId) {
+        return {
+          ...conversa,
+          mensagens: [...conversa.mensagens, novaMensagem],
+          ultimaMensagem: texto,
+        };
+      }
+      return conversa;
+    });
 
-  setConversas(novasConversas);
-  setTextoMensagem("");
+    setConversas(novasConversas);
+    setTextoMensagem("");
 
   }
 
-  function Keydown(e){
-    if(e.key === "Enter"){
+  function Keydown(e) {
+    if (e.key === "Enter") {
       e.preventDefault();
       EnviarMensagem();
     }
   }
+
+  if (!conversaSelecionada) {
+    return (
+      <div className="chat-container">
+        <div className="chat-sidebar">
+          <h3 className="sidebar-title">Conversas</h3>
+
+          <div className="sidebar-list">
+            {conversas.map((conversa) => (
+              <button
+                key={conversa.id}
+                className="sidebar-item"
+                onClick={() => {
+                  setConversaSelecionadaId(conversa.id);
+                  if (window.innerWidth < 768) {
+                    document.querySelector(".chat-sidebar").classList.add("hide-mobile");
+                  }
+                }}
+              >
+                <div className="sidebar-item-content">
+                  <img src={conversa.foto} className="sidebar-item-img" />
+                  <div className="sidebar-texts">
+                    <div className="sidebar-item-name">{conversa.nome}</div>
+                    <div className="sidebar-item-preview">{conversa.ultimaMensagem}</div>
+                  </div>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="chat-area">
+          <div className="chat-header-name selecione">
+            Selecione uma conversa
+          </div>
+        </div>
+      </div>
+    );
+  }
+
 
   return (
     <div className="chat-container">
@@ -131,25 +169,44 @@ function MensagemArtista() {
                 "sidebar-item " +
                 (conversa.id === conversaSelecionadaId ? "sidebar-item-active" : "")
               }
-              onClick={() => setConversaSelecionadaId(conversa.id)}
+              onClick={() => {
+                setConversaSelecionadaId(conversa.id);
+
+                if (window.innerWidth < 768) {
+                  document.querySelector(".chat-sidebar").classList.add("hide-mobile");
+                }
+              }}
             >
               <div className="sidebar-item-content">
-                  <img src={conversa.foto} alt="" className="sidebar-item-img"/>
+                <img src={conversa.foto} alt="" className="sidebar-item-img" />
                 <div className="sidebar-texts">
                   <div className="sidebar-item-name">{conversa.nome}</div>
-                <div className="sidebar-item-preview">{conversa.ultimaMensagem}</div>
-                  </div>
+                  <div className="sidebar-item-preview">{conversa.ultimaMensagem}</div>
+                </div>
               </div>
-              
+
             </button>
           ))}
         </div>
       </div>
 
       <div className="chat-area">
-
         <div className="chat-header">
-          <div className="chat-header-name">{conversaSelecionada.nome}</div>
+          {conversaSelecionadaId !== null && (
+            <button
+              className="btn-voltar"
+              onClick={() => {
+                setConversaSelecionadaId(null);
+                document.querySelector(".chat-sidebar").classList.remove("hide-mobile");
+              }}
+            >
+              <i className="bi bi-arrow-left"></i>
+            </button>
+          )}
+
+          <div className="chat-header-name">
+            {conversaSelecionada.nome}
+          </div>
         </div>
 
         <div className="chat-messages">
@@ -181,7 +238,7 @@ function MensagemArtista() {
 
           <i className="bi bi-mic chat-icon"></i>
           <button className="chat-send-btn" onClick={EnviarMensagem}>
-                <i className="bi bi-send-fill"></i>
+            <i className="bi bi-send-fill"></i>
           </button>
         </div>
 
