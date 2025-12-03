@@ -120,6 +120,28 @@ select:focus {
   box-shadow: 0px 4px 10px rgba(76, 30, 119, 0.2);
 }
 
+#container-react {
+  position: relative; 
+}
+
+.btn-voltar-home {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: #4C1E77;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem 2rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+
+.btn-voltar-home:hover {
+  background: #A020F0;
+}
+
 @media (max-width: 768px) {
   #container{
     display: flex;

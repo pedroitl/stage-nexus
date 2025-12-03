@@ -1,6 +1,10 @@
 ReactDOM.render(
   <div id="container-react">
+    <button type="button" className="btn-voltar-home" onClick={() => window.location.href = "../index.html"}>
+        <i className="bi bi-arrow-left"></i>
+    </button>
     <div className="identidade">
+      
       <img src="../assets/logotipo-sem-fundo.png" alt="logo" />
       <h1>Stage Nexus</h1>
       <div className="outros-logins">
@@ -41,27 +45,27 @@ const formulario = document.querySelector(".formulario-login");
 formulario.addEventListener("submit", function (e) {
   e.preventDefault();
 });
-loginButton.onclick = function (){
-  if(usuarioInput.value.trim() === ""){
+loginButton.onclick = function () {
+  if (usuarioInput.value.trim() === "") {
     alert("Por favor, preencha o seu nome");
     return;
   }
-  if(senhaInput.value.trim() === ""){
-      alert("Por favor, preencha com sua senha!");
-      return;
+  if (senhaInput.value.trim() === "") {
+    alert("Por favor, preencha com sua senha!");
+    return;
   }
   const categoria = selectCategoria.value;
-  if(categoria === "artista"){
+  if (categoria === "artista") {
     window.location.href = "artist/feed-artist.html";
-  }else if(categoria === "produtor"){
+  } else if (categoria === "produtor") {
     window.location.href = "producer/feed-producer.html";
-  }else {
+  } else {
     alert("Por favor, selecione uma categoria!");
   }
-      
+
 }
 
-cadastroButton.onclick = function(){
+cadastroButton.onclick = function () {
   window.location.href = "cadastro.html";
 }
 

@@ -63,6 +63,9 @@ function Cadastro() {
     <div id="container-react">
 
       {/* LADO ESQUERDO */}
+      <button type="button" className="btn-voltar-home" onClick={() => window.location.href = "../index.html"}>
+        <i className="bi bi-arrow-left"></i>
+      </button>
       <div className="identidade">
         <img src="../assets/logotipo-sem-fundo.png" alt="logo" />
         <h1>Stage Nexus</h1>
