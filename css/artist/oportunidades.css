@@ -334,9 +334,9 @@ body {
     background: #4C1E77;
 }
 @media (max-width: 768px) {
+
     .conteudo-oportunidades {
-        margin-top: 5.5rem;
-        padding: 0 1rem;
+        padding: 0 1rem 3rem 1rem;
     }
 
     .oportunidades2-busca {
