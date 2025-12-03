@@ -11,23 +11,6 @@ ReactDOM.render(
                 <a href="pages/cadastro.html" className="botao-nav">Cadastre-se</a>
             </nav>
         </header>
-        <section className="secao-hero">
-            <div className="hero-conteudo">
-                <h1 className="hero-titulo">Encontre oportunidades, talentos e conexões no universo musical.</h1>
-
-                <p className="hero-subtitulo">
-                    O Stage Nexus conecta artistas e produtores em um ambiente pensado para divulgar trabalhos,
-                    encontrar projetos e organizar toda a comunicação em um só lugar.
-                </p>
-
-                <div className="hero-acoes">
-                    <a href="pages/login.html" className="botao-primario">Já tenho conta</a>
-                    <a href="pages/cadastro.html" className="botao-secundario">Quero me cadastrar</a>
-                </div>
-
-                <p className="hero-informacao">Leva menos de 2 minutos para começar.</p>
-            </div>
-        </section>
         <section className="secao-sobre">
             <h1 className="sobre-titulo">Conectando artistas e produtores</h1>
 
@@ -65,6 +48,23 @@ ReactDOM.render(
                     Centralize mensagens, notificações e propostas em um fluxo simples,
                     sem precisar ficar pulando entre vários aplicativos.
                 </p>
+            </div>
+        </section>
+        <section className="secao-hero">
+            <div className="hero-conteudo">
+                <h1 className="hero-titulo">Encontre oportunidades, talentos e conexões no universo musical.</h1>
+
+                <p className="hero-subtitulo">
+                    O Stage Nexus conecta artistas e produtores em um ambiente pensado para divulgar trabalhos,
+                    encontrar projetos e organizar toda a comunicação em um só lugar.
+                </p>
+
+                <div className="hero-acoes">
+                    <a href="pages/login.html" className="botao-primario">Já tenho conta</a>
+                    <a href="pages/cadastro.html" className="botao-secundario">Quero me cadastrar</a>
+                </div>
+
+                <p className="hero-informacao">Leva menos de 2 minutos para começar.</p>
             </div>
         </section>
         <footer className="footer">

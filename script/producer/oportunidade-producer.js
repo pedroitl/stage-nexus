@@ -123,7 +123,7 @@ function PaginaOportunidadesProdutor() {
                         className="btn-nova-oportunidade-topo"
                         onClick={() => setModalAberto(true)}
                     >
-                        Cadastrar oportunidade
+                       + Cadastrar oportunidade
                     </button>
                 </div>
             </section>
