@@ -108,7 +108,7 @@ body{
     width: 100%;
     max-width: 900px;
     margin: 6rem auto 3rem auto;
-    padding: 0 1rem;
+    padding: 0 1rem 3rem 1rem;
     font-family: "Inter", sans-serif;
 }
 
@@ -292,6 +292,12 @@ body{
   background: #ede4fa;
 }
 
+.post-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
 @media (max-width: 768px) {
      .hamburguer {

@@ -43,164 +43,118 @@ btnMenu.addEventListener("click", () => {
     menuMobile.classList.toggle("escondido");
 });
 
-async function renderPosts() {
-    ReactDOM.render(
-        <div className="postagens">
+function FeedArtist() {
+    const [posts, setPost] = React.useState([
+        {
+            id: 1,
+            autor: "Luna Alves",
+            img: "../../assets/posts/post-allofme.jpg",
+            avatar: "../../assets/feed/perfil-feed-1.jpeg",
+            desc: "Novo cover gravado ontem! 🎶✨  “All of Me” — versão ao vivo no piano.",
+            tags: ["Piano", "Cover", "Vocal"]
+        },
+        {
+            id: 2,
+            autor: "Diego Martins",
+            img: "../../assets/posts/post-indie.jpeg",
+            avatar: "../../assets/feed/perfil-feed-2.jpeg",
+            desc: "Mixagem finalizada! 🔥🔥  Mais um trabalho indie pronto pra ir pro mundo.",
+            tags: ["Mixagem", "Indie", "Produção"]
+        },
+        {
+            id: 3,
+            autor: "Ana Ribeiro",
+            img: "../../assets/posts/post-ensaio.jpg",
+            avatar: "../../assets/feed/perfil-feed-3.jpeg",
+            desc: "Ensaiando para o festival de verão ☀️🎤  Energia lá em cima hoje!",
+            tags: ["Festival", "Ensaios"]
+        },
+        {
+            id: 4,
+            autor: "Bruno Guitar",
+            img: "../../assets/posts/post-guitarra.webp",
+            avatar: "../../assets/feed/perfil-feed-4.jpeg",
+            desc: "Nova guitarra, novos riffs 😎🎸  Preparando projetos incríveis.",
+            tags: ["Guitarra", "Rock", "Riffs"]
+        },
+        {
+            id: 5,
+            autor: "Clara Beats",
+            img: "../../assets/posts/post-trap.webp",
+            avatar: "../../assets/feed/perfil-feed-5.jpeg",
+            desc: "Beat novo lançado! 💜🔥  Trap + Lo-fi = amor demais.",
+            tags: ["Trap", "Lo-fi", "Beatmaker"]
+        }
+
+    ]);
+
+    const [novoPost, setNovoPost] = React.useState("");
+    const [usuarioLogado, setUsuarioLogado] = React.useState({
+        nome: "Maria Artista",
+        avatar: "../../assets/feed/user-artist.webp"
+    });
+
+    function enviarPost() {
+        if (!novoPost.trim()) return;
+
+        const novo = {
+            id: Date.now(),
+            autor: usuarioLogado.nome,
+            avatar: usuarioLogado.avatar,
+            img: "",
+            desc: novoPost,
+            tags: []
+        };
+
+        setPost([novo, ...posts]);
+        setNovoPost("");
+    }
+
+    return (
+        <div className="feed-container">
             <div className="criar-post">
                 <div className="criar-post-topo">
-                    <i className="bi bi-person-circle"></i>
-                    <input type="text" placeholder="O que você está pensando?" className="input-post"></input>
+                    <img src={usuarioLogado.avatar} className="post-avatar" />
+                    <input
+                        type="text"
+                        placeholder="O que você está pensando?"
+                        value={novoPost}
+                        onChange={(e) => setNovoPost(e.target.value)}
+                        className="input-post"
+                    />
                 </div>
-
                 <div className="criar-post-acoes">
+                    <button className="btn-acao" onClick={enviarPost}>
+                        <i className="bi bi-send-fill"></i> Postar
+                    </button>
                     <button className="btn-acao"><i className="bi bi-image"></i> Foto</button>
                     <button className="btn-acao"><i className="bi bi-music-note-beamed"></i> Áudio</button>
-                    <button className="btn-acao"><i className="bi bi-camera-video"></i> Vídeo</button>
                 </div>
             </div>
-            <div className="post-card">
-                <div className="post-header">
-                    <div className="post-info">
-                        <i className="bi bi-person-circle"></i>
-                        <span>Luna Alves</span>
+
+            {posts.map((p) => (
+                <div className="post-card" key={p.id}>
+                    <div className="post-header">
+                        <div className="post-info">
+                            <img src={p.avatar || usuarioLogado.avatar} className="post-avatar" />
+                            <span>{p.autor}</span>
+                        </div>
+                    </div>
+                    {p.img && <img src={p.img} className="post-img" />}
+                    <p className="post-desc">{p.desc}</p>
+                    <div className="tags">
+                        {p.tags.map((tag, i) => <span className="tag" key={i}>{tag}</span>)}
+                    </div>
+                    <div className="post-acoes">
+                        <i className="bi bi-heart"></i>
+                        <i className="bi bi-chat"></i>
+                        <i className="bi bi-share"></i>
                     </div>
                 </div>
-
-                <img src="../../assets/posts/post-allofme.jpg" className="post-img" />
-
-                <p className="post-desc">
-                    Novo cover gravado ontem! 🎶✨  
-                    “All of Me” — versão ao vivo no piano.
-                </p>
-
-                <div className="tags">
-                    <span className="tag">Piano</span>
-                    <span className="tag">Cover</span>
-                    <span className="tag">Vocal</span>
-                </div>
-
-                <div className="post-acoes">
-                    <i className="bi bi-heart"></i>
-                    <i className="bi bi-chat"></i>
-                    <i className="bi bi-share"></i>
-                </div>
-            </div>
-
-            <div className="post-card">
-                <div className="post-header">
-                    <div className="post-info">
-                        <i className="bi bi-person-circle"></i>
-                        <span>Diego Martins</span>
-                    </div>
-                </div>
-
-                <img src="../../assets/posts/post-indie.jpeg" className="post-img" />
-
-                <p className="post-desc">
-                    Mixagem finalizada! 🔥🔥  
-                    Mais um trabalho indie pronto pra ir pro mundo.
-                </p>
-
-                <div className="tags">
-                    <span className="tag">Mixagem</span>
-                    <span className="tag">Indie</span>
-                    <span className="tag">Produção</span>
-                </div>
-
-                <div className="post-acoes">
-                    <i className="bi bi-heart"></i>
-                    <i className="bi bi-chat"></i>
-                    <i className="bi bi-share"></i>
-                </div>
-            </div>
-
-            <div className="post-card">
-                <div className="post-header">
-                    <div className="post-info">
-                        <i className="bi bi-person-circle"></i>
-                        <span>Ana Ribeiro</span>
-                    </div>
-                </div>
-
-                <img src="../../assets/posts/post-ensaio.jpg" className="post-img" />
-
-                <p className="post-desc">
-                    Ensaiando para o festival de verão ☀️🎤  
-                    Energia lá em cima hoje!
-                </p>
-
-                <div className="tags">
-                    <span className="tag">Festival</span>
-                    <span className="tag">Ensaios</span>
-                </div>
-
-                <div className="post-acoes">
-                    <i className="bi bi-heart"></i>
-                    <i className="bi bi-chat"></i>
-                    <i className="bi bi-share"></i>
-                </div>
-            </div>
-
-            <div className="post-card">
-                <div className="post-header">
-                    <div className="post-info">
-                        <i className="bi bi-person-circle"></i>
-                        <span>Bruno Guitar</span>
-                    </div>
-                </div>
-
-                <img src="../../assets/posts/post-guitarra.webp" className="post-img" />
-
-                <p className="post-desc">
-                    Nova guitarra, novos riffs 😎🎸  
-                    Preparando projetos incríveis.
-                </p>
-
-                <div className="tags">
-                    <span className="tag">Guitarra</span>
-                    <span className="tag">Rock</span>
-                    <span className="tag">Riffs</span>
-                </div>
-
-                <div className="post-acoes">
-                    <i className="bi bi-heart"></i>
-                    <i className="bi bi-chat"></i>
-                    <i className="bi bi-share"></i>
-                </div>
-            </div>
-
-            <div className="post-card">
-                <div className="post-header">
-                    <div className="post-info">
-                        <i className="bi bi-person-circle"></i>
-                        <span>Clara Beats</span>
-                    </div>
-                </div>
-
-                <img src="../../assets/posts/post-trap.webp" className="post-img" />
-
-                <p className="post-desc">
-                    Beat novo lançado! 💜🔥  
-                    Trap + Lo-fi = amor demais.
-                </p>
-
-                <div className="tags">
-                    <span className="tag">Trap</span>
-                    <span className="tag">Lo-fi</span>
-                    <span className="tag">Beatmaker</span>
-                </div>
-
-                <div className="post-acoes">
-                    <i className="bi bi-heart"></i>
-                    <i className="bi bi-chat"></i>
-                    <i className="bi bi-share"></i>
-                </div>
-            </div>
-        </div>,
-        document.getElementById("posts")
+            ))}
+        </div>
     );
-
-
 }
 
-renderPosts();
+// Render no DOM
+ReactDOM.render(<FeedArtist />, document.getElementById("posts"));
