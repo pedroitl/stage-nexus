@@ -229,14 +229,14 @@ function PaginaOportunidades() {
 
                     <section className="section-oportunidades2">
                         <form className="oportunidades2-busca">
-                            <i class="bi bi-search"></i>
+                            <i className="bi bi-search"></i>
                             <input
                                 className="buscar"
                                 type="text"
                                 placeholder="Buscar oportunidades..."
                             />
                             <div className="icon-select-wrapper">
-                                <i class="bi bi-building"></i>
+                                <i className="bi bi-building"></i>
                                 <select className="modalidade">
                                     <option value="todasModalidade">Todas Modalidades</option>
                                     <option value="remoto">Remoto</option>

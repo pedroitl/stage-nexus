@@ -1,0 +1,355 @@
+.conteudo-oportunidades-produtor {
+    max-width: 1120px;
+    margin: 6rem auto 3rem auto;
+    padding: 0 1.5rem;
+    font-family: "Inter", sans-serif;
+}
+
+.section-oportunidades {
+    margin-bottom: 1.5rem;
+}
+
+.oportunidades-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.text-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #1f2933;
+}
+
+.text-subtitle {
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+.section-oportunidades2 {
+    margin-bottom: 1.5rem;
+}
+
+.oportunidades2-busca {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #ffffff;
+    padding: 0.9rem 1rem;
+    border-radius: 14px;
+    box-shadow: 0 6px 14px rgba(76, 30, 119, 0.15);
+    border: 1px solid rgba(76, 30, 119, 0.12);
+}
+
+.oportunidades2-busca i {
+    font-size: 1.2rem;
+    color: #4C1E77;
+}
+
+.buscar {
+    flex: 1;
+    border: none;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.icon-select-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.categoria,
+.disponibilidade {
+    border-radius: 999px;
+    border: 1px solid #d1d5db;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.9rem;
+    background: #f9fafb;
+    color: #374151;
+}
+
+
+.lista-produtores {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.card-produtor {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 14px rgba(76, 30, 119, 0.18);
+    border: 1px solid rgba(76, 30, 119, 0.12);
+    transition: 0.15s ease;
+}
+
+.card-produtor:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(76, 30, 119, 0.25);
+    border-color: #4C1E77;
+}
+
+.card-produtor-banners {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 150px;
+}
+
+.card-produtor-banners img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-produtor-body {
+    padding: 1.25rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.card-produtor-header {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.card-produtor-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #f3f4f6;
+}
+
+.card-produtor-info h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.card-produtor-funcao {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.card-produtor-rating {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.card-produtor-rating i {
+    color: #f59e0b;
+}
+
+.card-produtor-descricao {
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+.card-produtor-estilos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.chip {
+    background: #f4ebff;
+    color: #4C1E77;
+    padding: 0.25rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    border: 1px solid #dfc8ff;
+}
+
+.chip-mais {
+    background: #e5e7eb;
+    color: #1f2937;
+}
+
+.card-produtor-infos {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.card-produtor-infos i {
+    color: #4C1E77;
+}
+
+.card-produtor-status-wrapper {
+    margin-top: 0.3rem;
+}
+
+.card-produtor-status {
+    padding: 0.27rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.status-bolinha {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.pill-disponivel {
+    background: #e8fff1;
+    color: #166534;
+}
+
+.pill-limitada {
+    background: #fff8e1;
+    color: #b45309;
+}
+
+.pill-ocupada {
+    background: #ffe2e2;
+    color: #b91c1c;
+}
+
+.card-produtor-acoes {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 0.8rem;
+}
+
+.btn-enviar-convite {
+    border: none;
+    border-radius: 999px;
+    padding: 0.55rem 1.4rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(90deg, #A020F0, #4C1E77);
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(76, 30, 119, 0.25);
+    transition: 0.2s ease;
+}
+
+.btn-enviar-convite:hover {
+    filter: brightness(1.08);
+    transform: translateY(-2px);
+}
+
+.btn-ver-perfil {
+    border-radius: 999px;
+    padding: 0.55rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    color: #374151;
+    transition: 0.2s ease;
+}
+
+.btn-ver-perfil:hover {
+    background: #f3f4f6;
+}
+
+.detalhes-produtor {
+    max-width: 1120px;
+    margin: 6rem auto 3rem auto;
+    padding: 2rem 2.2rem;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 6px 14px rgba(76, 30, 119, 0.18);
+    border: 1px solid rgba(76, 30, 119, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.botao-voltar {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #4C1E77;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-weight: 500;
+}
+
+.detalhes-produtor-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.detalhes-produtor-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.detalhes-produtor-rating i {
+    color: #f59e0b;
+}
+
+.detalhes-produtor-faixa {
+    margin-top: 0.4rem;
+}
+
+.botao-candidatar {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 999px;
+    border: none;
+    background: linear-gradient(90deg, #A020F0, #4C1E77);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.botao-candidatar:hover {
+    filter: brightness(1.07);
+}
+
+@media (max-width: 900px) {
+    .lista-produtores {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .conteudo-oportunidades-produtor {
+        margin-top: 5.5rem;
+    }
+
+    .oportunidades2-busca {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .card-produtor-banners {
+        height: 130px;
+    }
+
+    .card-produtor-acoes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-enviar-convite,
+    .btn-ver-perfil {
+        width: 100%;
+    }
+}
