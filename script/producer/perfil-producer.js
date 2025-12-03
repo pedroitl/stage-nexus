@@ -168,7 +168,7 @@ function renderizarPerfil() {
                             </p>
 
                             <div className="post-imagem">
-                                <img src="https://images.pexels.com/photos/4439425/pexels-photo-4439425.jpeg" />
+                                <img src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg" />
                             </div>
 
                             <div className="post-info">
