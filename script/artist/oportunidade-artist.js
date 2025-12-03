@@ -1,35 +1,3 @@
-ReactDOM.render(
-    <div className="menu-suspenso">
-        <div className="logo-busca">
-            <div className="logo">
-                <a href="/pages/artist/feed-artist.html">
-                    <img src="/assets/logotipo-branco.png" alt="" />
-                </a>
-            </div>
-            <div className="busca">
-                <input placeholder="Buscar perfis..." />
-                <a href=""><i className="bi bi-search"></i></a>
-            </div>
-        </div>
-
-        <div className="barra-logout">
-            <div className="barra-tarefas">
-                <a href="/pages/artist/feed-artist.html"><i className="bi bi-house"></i></a>
-                <a href="/pages/artist/oportunidade-artist.html"><i className="bi bi-briefcase"></i></a>
-                <a href="/pages/artist/notificacoes-artist.html"><i className="bi bi-bell"></i></a>
-                <a href="/pages/artist/mensagens-artist.html"><i className="bi bi-chat"></i></a>
-                <a href="/pages/artist/perfil-artist.html"><i className="bi bi-person"></i></a>
-            </div>
-
-            <div className="logout">
-                <a href="/pages/login.html"><i className="bi bi-box-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>,
-    document.getElementById("menu-suspenso")
-);
-
-
 function PaginaOportunidades() {
     const vagas = [
         {
@@ -41,8 +9,7 @@ function PaginaOportunidades() {
             modalidade: "Presencial",
             salario: "R$ 4.000 - R$ 6.000 (por mês)",
             prazo: "20/02/2026",
-            nota: 4.8,
-            status: "Aberto",
+            status: "Disponível",
             publicado: "Publicado 1 dia atrás",
 
             resumo: "Procuramos vocalista para banda pop autoral com agenda ativa em casas de shows e eventos corporativos.",
@@ -95,8 +62,7 @@ function PaginaOportunidades() {
             modalidade: "Presencial",
             salario: "R$ 300 - R$ 500 por noite",
             prazo: "12/12/2025",
-            nota: 4.6,
-            status: "Aberto",
+            status: "Disponível",
             publicado: "Publicado 3 dias atrás",
 
             resumo: "Casa de shows tradicional procura cantor(a) de forró para apresentações semanais ao vivo.",
@@ -148,8 +114,7 @@ function PaginaOportunidades() {
             modalidade: "Presencial",
             salario: "A combinar (por show + participação)",
             prazo: "25/02/2026",
-            nota: 4.7,
-            status: "Aberto",
+            status: "Disponível",
             publicado: "Publicado 5 dias atrás",
 
             resumo: "Buscamos vocalista para projeto de sertanejo universitário com foco em bares e eventos universitários.",
@@ -201,8 +166,7 @@ function PaginaOportunidades() {
             modalidade: "Presencial / Eventual online",
             salario: "R$ 1.500 - R$ 2.500 por mês (projetos recorrentes)",
             prazo: "05/03/2026",
-            nota: 4.9,
-            status: "Aberto",
+            status: "Disponível",
             publicado: "Publicado 7 dias atrás",
 
             resumo: "Ministério de louvor em expansão busca backing vocal para apresentações ao vivo e gravações em estúdio.",
@@ -309,7 +273,7 @@ function PaginaOportunidades() {
 
                                     <p className="vaga-descricao">{vaga.resumo}</p>
 
-                                    <div className="vaga-reqisitos">
+                                    <div className="vaga-requisitos">
                                         {vaga.requisitosObrigatorios.map((req, index) => (
                                             <span key={index} className="chip">
                                                 {req}
@@ -320,7 +284,7 @@ function PaginaOportunidades() {
                                     <div className="vaga-rodape">
                                         <span className="vaga-publicado">{vaga.publicado}</span>
                                         <span className="vaga-status">
-                                            {vaga.nota} • {vaga.status}
+                                             {vaga.status}
                                         </span>
                                     </div>
                                 </div>
