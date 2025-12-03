@@ -235,6 +235,19 @@
     cursor: pointer;
 }
 
+.chat-area.empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f7ff;
+}
+
+.selecionar-msg {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #4C1E77;
+}
+
 @media (max-width: 768px) {
 
     .chat-messages {
@@ -248,6 +261,12 @@
         margin: 5.5rem 0 0 0;
         border-radius: 0;
         box-shadow: none;
+        flex-direction: column  ;
+    }
+
+    .chat-sidebar {
+        width: 100%;
+        border-right: none;
     }
 
     .msg {
@@ -300,5 +319,9 @@
 
     .chat-area .chat-header-name.selecione {
         display: none !important;
+    }
+
+    .selecionar-msg {
+        display: none;
     }
 }

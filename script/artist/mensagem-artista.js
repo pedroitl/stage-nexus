@@ -145,11 +145,9 @@ function MensagemArtista() {
           </div>
         </div>
 
-        <div className="chat-area">
-          <div className="chat-header-name selecione">
-            Selecione uma conversa
-          </div>
-        </div>
+        {!conversaSelecionada && (
+          <div className="selecionar-msg">Selecione uma conversa</div>
+        )}
       </div>
     );
   }
@@ -190,7 +188,7 @@ function MensagemArtista() {
         </div>
       </div>
 
-      <div className="chat-area">
+      <div className={`chat-area ${!conversaSelecionada ? "empty" : ""}`}>
         <div className="chat-header">
           {conversaSelecionadaId !== null && (
             <button
