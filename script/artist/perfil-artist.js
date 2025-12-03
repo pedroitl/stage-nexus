@@ -63,72 +63,285 @@ function renderizarPerfil() {
 
             {/* Aba publicações */}
             {abaSelecionada === "publicacoes" && (
-                <div className="perfil-publicacoes">
-                    <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg" alt="" />
-                    <img src="https://images.pexels.com/photos/164936/pexels-photo-164936.jpeg" alt="" />
-                    <img src="https://images.pexels.com/photos/164879/pexels-photo-164879.jpeg" alt="" />
+                <div className="publicacoes-feed">
+
+                    {/* POST 1 */}
+                    <div className="post-card">
+                        
+                        <div className="post-conteudo">
+                            <div className="post-topo">
+                                <div className="post-user-icon"><i className="bi bi-person-circle"></i></div>
+                                <div>
+                                    <strong>Maria Artista</strong>
+                                    <span className="post-tempo">2d</span>
+                                </div>
+                            </div>
+
+                            <p className="post-legenda">
+                                Acabei de sair de um show incrível! A energia do público estava demais 🎤🔥  
+                                <span className="hashtags">#ShowAoVivo #Música</span>
+                            </p>
+                        </div>
+
+                        <div className="post-imagem">
+                            <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg" />
+                        </div>
+
+                        <div className="post-conteudo">
+                            <div className="post-info">
+                                <span>243 curtidas</span>
+                                <span>18 comentários</span>
+                                <span>5 compartilhamentos</span>
+                            </div>
+
+                            <div className="post-acoes">
+                                <button><i className="bi bi-heart"></i> Curtir</button>
+                                <button><i className="bi bi-chat"></i> Comentar</button>
+                                <button><i className="bi bi-share"></i> Compartilhar</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    {/* POST 2 */}
+                    <div className="post-card">
+
+                        <div className="post-conteudo">
+                            <div className="post-topo">
+                                <div className="post-user-icon"><i className="bi bi-person-circle"></i></div>
+                                <div>
+                                    <strong>Maria Artista</strong>
+                                    <span className="post-tempo">2 semanas</span>
+                                </div>
+                            </div>
+
+                            <p className="post-legenda">
+                                Minha primeira aula de sax  
+                                <span className="hashtags"> #Sax #Jazz</span>
+                            </p>
+                        </div>
+
+                        <div className="post-imagem">
+                            <img src="https://images.pexels.com/photos/164936/pexels-photo-164936.jpeg" />
+                        </div>
+
+                        <div className="post-conteudo">
+                            <div className="post-info">
+                                <span>367 curtidas</span>
+                                <span>10 comentários</span>
+                                <span>2 compartilhamentos</span>
+                            </div>
+
+                            <div className="post-acoes">
+                                <button><i className="bi bi-heart"></i> Curtir</button>
+                                <button><i className="bi bi-chat"></i> Comentar</button>
+                                <button><i className="bi bi-share"></i> Compartilhar</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    {/* POST 3 */}
+                    <div className="post-card">
+
+                        <div className="post-conteudo">
+                            <div className="post-topo">
+                                <div className="post-user-icon"><i className="bi bi-person-circle"></i></div>
+                                <div>
+                                    <strong>Maria Artista</strong>
+                                    <span className="post-tempo">1 mês</span>
+                                </div>
+                            </div>
+
+                            <p className="post-legenda">
+                                Vem aí música nova  
+                                <span className="hashtags"> #Lançamento</span>
+                            </p>
+                        </div>
+
+                        <div className="post-imagem">
+                            <img src="https://images.pexels.com/photos/164879/pexels-photo-164879.jpeg" />
+                        </div>
+
+                        <div className="post-conteudo">
+                            <div className="post-info">
+                                <span>1050 curtidas</span>
+                                <span>50 comentários</span>
+                                <span>15 compartilhamentos</span>
+                            </div>
+
+                            <div className="post-acoes">
+                                <button><i className="bi bi-heart"></i> Curtir</button>
+                                <button><i className="bi bi-chat"></i> Comentar</button>
+                                <button><i className="bi bi-share"></i> Compartilhar</button>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             )}
-
-            {/* Aba trabalhos */}
+            {/* Aba Trabalhos */}
             {abaSelecionada === "trabalhos" && (
                 <div className="perfil-trabalhos">
                     <h3>Trabalhos Recentes</h3>
 
                     <div className="trabalho-card">
-                        <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg" alt="Show" className="trabalho-img" />
-                        <div className="trabalho-info">
-                            <h4>Festival de Verão 2024</h4>
-                            <span className="trabalho-categoria">Show</span>
-                            <span className="trabalho-data">Janeiro 2024</span>
+                        
+                        <div className="trabalho-img-wrapper">
+                            <img
+                                src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg"
+                                alt="Show"
+                                className="trabalho-img"
+                            />
                         </div>
-                        <button className="trabalho-ver">
-                            <i class="bi bi-play"></i>
-                        </button>
-                    </div>
 
+                        <div className="trabalho-header">
+                            <div className="trabalho-titulo-area">
+                                <h4>Festival de Verão 2024</h4>
+                                <div className="trabalho-tags">
+                                    <span className="trabalho-categoria">Show</span>
+                                    <span className="trabalho-data">Janeiro 2024</span>
+                                </div>
+                            </div>
+
+                            <div className="trabalho-stars">
+                                <i className="bi bi-star-fill"></i>
+                                <i className="bi bi-star-fill"></i>
+                                <i className="bi bi-star-fill"></i>
+                                <i className="bi bi-star-fill"></i>
+                                <i className="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+
+                        <p className="trabalho-descricao">
+                            Performance como baterista principal em festival com 3 dias de duração
+                        </p>
+
+                        <div className="trabalho-cliente">
+                            <i class="bi bi-building"></i>
+                            <span>Cliente: Produtora XYZ</span>
+                        </div>
+
+                    </div>
                     <div className="trabalho-card">
-                        <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg" alt="Gravação" className="trabalho-img" />
-                        <div className="trabalho-info">
-                            <h4>Gravação Álbum - Banda XYZ</h4>
-                            <span className="trabalho-categoria">Gravação</span>
-                            <span className="trabalho-data">Dezembro 2023</span>
+                        
+                        <div className="trabalho-img-wrapper">
+                            <img
+                                src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg"
+                                alt="Show"
+                                className="trabalho-img"
+                            />
                         </div>
-                        <button className="trabalho-ver">
-                            <i class="bi bi-play"></i>
-                        </button>
-                    </div>
 
+                        <div className="trabalho-header">
+                            <div className="trabalho-titulo-area">
+                                <h4>Festival de Verão 2024</h4>
+                                <div className="trabalho-tags">
+                                    <span className="trabalho-categoria">Show</span>
+                                    <span className="trabalho-data">Janeiro 2024</span>
+                                </div>
+                            </div>
+
+                            <div className="trabalho-stars">
+                                <i className="bi bi-star-fill"></i>
+                                <i className="bi bi-star-fill"></i>
+                                <i className="bi bi-star-fill"></i>
+                                <i className="bi bi-star-fill"></i>
+                                <i className="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+
+                        <p className="trabalho-descricao">
+                            Performance como baterista principal em festival com 3 dias de duração
+                        </p>
+
+                        <div className="trabalho-cliente">
+                            <i class="bi bi-building"></i>
+                            <span>Cliente: Produtora XYZ</span>
+                        </div>
+
+                    </div>
                     <div className="trabalho-card">
-                        <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg" alt="Turnê" className="trabalho-img" />
-                        <div className="trabalho-info">
-                            <h4>Turnê Nacional 2023</h4>
-                            <span className="trabalho-categoria">Turnê</span>
-                            <span className="trabalho-data">Julho - Setembro 2023</span>
+                        
+                        <div className="trabalho-img-wrapper">
+                            <img
+                                src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg"
+                                alt="Show"
+                                className="trabalho-img"
+                            />
                         </div>
-                        <button className="trabalho-ver">
-                            <i class="bi bi-play"></i>
-                        </button>
+
+                        <div className="trabalho-header">
+                            <div className="trabalho-titulo-area">
+                                <h4>Festival de Verão 2024</h4>
+                                <div className="trabalho-tags">
+                                    <span className="trabalho-categoria">Show</span>
+                                    <span className="trabalho-data">Janeiro 2024</span>
+                                </div>
+                            </div>
+
+                            <div className="trabalho-stars">
+                                <i className="bi bi-star-fill"></i>
+                                <i className="bi bi-star-fill"></i>
+                                <i className="bi bi-star-fill"></i>
+                                <i className="bi bi-star-fill"></i>
+                                <i className="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+
+                        <p className="trabalho-descricao">
+                            Performance como baterista principal em festival com 3 dias de duração
+                        </p>
+
+                        <div className="trabalho-cliente">
+                            <i class="bi bi-building"></i>
+                            <span>Cliente: Produtora XYZ</span>
+                        </div>
+
                     </div>
 
-                    <button className="btn-add-trabalho" onClick={() => { modalAddTrabalho = true; renderizarPerfil(); }}>
-                        + Adicionar Trabalho</button>
                 </div>
             )}
+
 
             {/* Aba sobre */}
             {abaSelecionada === "sobre" && (
-                <div className="perfil-sobre">
-                    <h4> <i class="bi bi-fast-forward"></i> Vida Profisional</h4>
-                    <p>{perfilDados.sobreTexto}</p>
+    <div className="perfil-sobre">
 
-                    <h4> <i class="bi bi-star"></i> Habilidades</h4>
-                    <p>{perfilDados.habilidades}</p>
+        <h4 className="sobre-titulo"><i class="bi bi-fast-forward"></i> Vida Profissional</h4>
+        <p className="sobre-texto">{perfilDados.sobreTexto}</p>
 
-                    <h4><i class="bi bi-award"></i> Prêmios</h4>
-                    <p>{perfilDados.premios}</p>
-                </div>
+        <h4 className="sobre-titulo"><i class="bi bi-star"></i> Habilidades</h4>
+        <div className="habilidades-lista">
+            {perfilDados.habilidades.length > 0 ? (
+                perfilDados.habilidades.map((h, i) => (
+                    <span key={i} className="habilidade-chip">{h}</span>
+                ))
+            ) : (
+                <p className="sobre-texto">Nenhuma habilidade adicionada.</p>
             )}
+        </div>
+        <h4 className="sobre-titulo"><i class="bi bi-award"></i> Prêmios e Reconhecimentos</h4>
+        
+        <div className="premios-lista">
+            {perfilDados.premios.length > 0 ? (
+                perfilDados.premios.map((p, i) => (
+                    <div key={i} className="premio-card">
+                        <i class="bi bi-trophy"></i>
+                        <span>{p}</span>
+                    </div>
+                ))
+            ) : (
+                <p className="sobre-texto">Nenhum prêmio adicionado.</p>
+            )}
+        </div>
+
+    </div>
+)}
+
 
             {/* Modal editar perfil */}
             {modalEditarPerfil && (
