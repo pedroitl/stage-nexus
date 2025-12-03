@@ -66,49 +66,87 @@ function MensagemProdutor() {
   const [conversas, setConversas] = React.useState(conversasIniciais);
   const [conversaSelecionadaId, setConversaSelecionadaId] = React.useState(conversasIniciais[0].id);
 
-  const [textoMensagem,  setTextoMensagem] = React.useState("");
+  const [textoMensagem, setTextoMensagem] = React.useState("");
 
   const conversaSelecionada = conversas.find(
     (c) => c.id === conversaSelecionadaId
   );
 
-  function EnviarMensagem(){
+  function EnviarMensagem() {
     const texto = textoMensagem.trim();
     if (!texto) return;
 
     const novaMensagem = {
-    id: Date.now(),
-    de: "me",
-    texto: texto,
-  };
+      id: Date.now(),
+      de: "me",
+      texto: texto,
+    };
 
-  const novasConversas = conversas.map((conversa)=>{
-    if(conversa.id === conversaSelecionadaId){
-      return {
-        ...conversa,
-        mensagens: [...conversa.mensagens, novaMensagem],
-        ultimaMensagem:texto,
-      };
-    }
-    return conversa;
-  });
+    const novasConversas = conversas.map((conversa) => {
+      if (conversa.id === conversaSelecionadaId) {
+        return {
+          ...conversa,
+          mensagens: [...conversa.mensagens, novaMensagem],
+          ultimaMensagem: texto,
+        };
+      }
+      return conversa;
+    });
 
-  setConversas(novasConversas);
-  setTextoMensagem("");
+    setConversas(novasConversas);
+    setTextoMensagem("");
 
   }
 
-  function Keydown(e){
-    if(e.key === "Enter"){
+  function Keydown(e) {
+    if (e.key === "Enter") {
       e.preventDefault();
       EnviarMensagem();
     }
   }
 
+  if (!conversaSelecionada) {
+    return (
+      <div className="chat-container">
+        <div className="chat-sidebar">
+          <h3 className="sidebar-title">Conversas</h3>
+
+          <div className="sidebar-list">
+            {conversas.map((conversa) => (
+              <button
+                key={conversa.id}
+                className="sidebar-item"
+                onClick={() => {
+                  setConversaSelecionadaId(conversa.id);
+                  if (window.innerWidth < 768) {
+                    document.querySelector(".chat-sidebar").classList.add("hide-mobile");
+                  }
+                }}
+              >
+                <div className="sidebar-item-content">
+                  <img src={conversa.foto} className="sidebar-item-img" />
+                  <div className="sidebar-texts">
+                    <div className="sidebar-item-name">{conversa.nome}</div>
+                    <div className="sidebar-item-preview">{conversa.ultimaMensagem}</div>
+                  </div>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {!conversaSelecionada && (
+          <div className="selecionar-msg">Selecione uma conversa</div>
+        )}
+      </div>
+    );
+  }
+
+
   return (
     <div className="chat-container">
 
-      <div className="chat-sidebar">
+      <div className={"chat-sidebar " + (window.innerWidth < 768 && conversaSelecionadaId !== null ? "hide-mobile" : "")}>
         <h3 className="sidebar-title">Conversas</h3>
 
         <div className="sidebar-list">
@@ -122,22 +160,35 @@ function MensagemProdutor() {
               onClick={() => setConversaSelecionadaId(conversa.id)}
             >
               <div className="sidebar-item-content">
-                  <img src={conversa.foto} alt="" className="sidebar-item-img"/>
+                <img src={conversa.foto} alt="" className="sidebar-item-img" />
                 <div className="sidebar-texts">
                   <div className="sidebar-item-name">{conversa.nome}</div>
-                <div className="sidebar-item-preview">{conversa.ultimaMensagem}</div>
-                  </div>
+                  <div className="sidebar-item-preview">{conversa.ultimaMensagem}</div>
+                </div>
               </div>
-              
+
             </button>
           ))}
         </div>
       </div>
 
-      <div className="chat-area">
-
+      <div className={`chat-area ${!conversaSelecionada ? "empty" : ""}`}>
         <div className="chat-header">
-          <div className="chat-header-name">{conversaSelecionada.nome}</div>
+          {conversaSelecionadaId !== null && (
+            <button
+              className="btn-voltar"
+              onClick={() => {
+                setConversaSelecionadaId(null);
+                document.querySelector(".chat-sidebar").classList.remove("hide-mobile");
+              }}
+            >
+              <i className="bi bi-arrow-left"></i>
+            </button>
+          )}
+
+          <div className="chat-header-name">
+            {conversaSelecionada.nome}
+          </div>
         </div>
 
         <div className="chat-messages">
@@ -169,7 +220,7 @@ function MensagemProdutor() {
 
           <i className="bi bi-mic chat-icon"></i>
           <button className="chat-send-btn" onClick={EnviarMensagem}>
-                <i className="bi bi-send-fill"></i>
+            <i className="bi bi-send-fill"></i>
           </button>
         </div>
 
