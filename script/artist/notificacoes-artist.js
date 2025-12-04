@@ -1,5 +1,3 @@
-renderPosts();
-
 const notificacoes = [
     { id: 1, lida: false, tipo: "bi-heart", texto: <p><strong>Maria Souza</strong> curtiu seu post: <em>"Novo cover postado!"</em></p>, tempo: "2h atrás" },
     { id: 2, lida: true,  tipo: "bi-chat",  texto: <p><strong>João Victor</strong> comentou: <em>"Mano, que voz incrível! 🔥"</em></p>, tempo: "4h atrás" },

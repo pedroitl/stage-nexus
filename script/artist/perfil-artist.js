@@ -4,8 +4,8 @@ let modalAddTrabalho = false;
 let novoTrabalho = {};
 // dados editáveis do usuário
 let perfilDados = {
-    nome: "Maria Artista",
-    arroba: "@mariaartista",
+    nome: "Raquel dos teclados",
+    arroba: "@raquel_teclados",
     dataNascimento: "25/10/2000",
     categoria: "Artista",
     bio: "Cantora e compositora apaixonada por música",
@@ -25,7 +25,7 @@ function renderizarPerfil() {
                     <i className="bi bi-pencil-square"></i> Editar Perfil
                 </button>
                 
-                <div className="perfil-foto"><i className="bi bi-person"></i></div>
+                <div className="perfil-foto"><img src="../../assets/feed/user-artist.jpg" className="post-avatar" /></div>
 
                 <div className="perfil-dados">
                     <h2>{perfilDados.nome}</h2>
@@ -70,9 +70,9 @@ function renderizarPerfil() {
                         
                         <div className="post-conteudo">
                             <div className="post-topo">
-                                <div className="post-user-icon"><i className="bi bi-person-circle"></i></div>
+                                <div className="post-user-icon"><img src="../../assets/feed/user-artist.jpg" className="post-user" /></div>
                                 <div>
-                                    <strong>Maria Artista</strong>
+                                    <strong>Raquel dos teclados</strong>
                                     <span className="post-tempo">2d</span>
                                 </div>
                             </div>
@@ -109,9 +109,9 @@ function renderizarPerfil() {
 
                         <div className="post-conteudo">
                             <div className="post-topo">
-                                <div className="post-user-icon"><i className="bi bi-person-circle"></i></div>
+                                <div className="post-user-icon"><img src="../../assets/feed/user-artist.jpg" className="post-user" /></div>
                                 <div>
-                                    <strong>Maria Artista</strong>
+                                    <strong>Raquel dos teclados</strong>
                                     <span className="post-tempo">2 semanas</span>
                                 </div>
                             </div>
@@ -148,9 +148,9 @@ function renderizarPerfil() {
 
                         <div className="post-conteudo">
                             <div className="post-topo">
-                                <div className="post-user-icon"><i className="bi bi-person-circle"></i></div>
+                                <div className="post-user-icon"><img src="../../assets/feed/user-artist.jpg" className="post-user" /></div>
                                 <div>
-                                    <strong>Maria Artista</strong>
+                                    <strong>Raquel dos teclados</strong>
                                     <span className="post-tempo">1 mês</span>
                                 </div>
                             </div>
@@ -485,3 +485,4 @@ function renderizarPerfil() {
 }
 
 renderizarPerfil();
+rodape();

@@ -91,7 +91,7 @@ function FeedArtist() {
     const [novoPost, setNovoPost] = React.useState("");
     const [usuarioLogado, setUsuarioLogado] = React.useState({
         nome: "Maria Artista",
-        avatar: "../../assets/feed/user-artist.webp"
+        avatar: "../../assets/feed/user-artist.jpg"
     });
 
     function enviarPost() {

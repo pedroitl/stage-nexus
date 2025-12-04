@@ -64,7 +64,9 @@ body {
   color: #4C1E77;
   font-weight: bolder;
   cursor: pointer;
+  font-size: 15px;
   text-align: center;
+  font-weight: 00;
   box-shadow: 1px 4px 10px rgba(76, 30, 119, 0.452);
 }
 
@@ -128,9 +130,9 @@ select:focus {
   position: absolute;
   top: 1rem;
   left: 1rem;
-  background: #4C1E77;
-  color: #fff;
-  border: none;
+  background: none;
+  color: #4C1E77;
+  border: 1px solid rgba(76, 30, 119, 0.18);
   border-radius: 0.5rem;
   padding: 0.6rem 2rem;
   cursor: pointer;
@@ -139,7 +141,7 @@ select:focus {
 }
 
 .btn-voltar-home:hover {
-  background: #A020F0;
+  background: rgba(76, 30, 119, 0.18);
 }
 
 @media (max-width: 768px) {
@@ -171,4 +173,9 @@ select:focus {
   .btn-social {
     width: 100%;
   }
+  .btn-voltar-home {
+    border: none;
+  padding: 0.5rem;
+  
+}
 }

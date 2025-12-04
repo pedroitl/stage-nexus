@@ -71,9 +71,9 @@ function Cadastro() {
         <h1>Stage Nexus</h1>
 
         <div className="outros-logins">
-          <button className="btn-social">Google</button>
-          <button className="btn-social">Gmail</button>
-        </div>
+        <button className="btn-social"><i class="bi bi-google"></i> Google</button>
+        <button className="btn-social"><i class="bi bi-envelope-at-fill"></i> Gmail</button>
+      </div>
       </div>
 
       {/* LADO DIREITO — FORMULÁRIO */}

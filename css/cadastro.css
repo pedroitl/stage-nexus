@@ -18,7 +18,7 @@ body {
   max-width: 1500px;          
   min-height: 80vh;           
   background: #ffffff;
-  padding: 5em 10rem;         
+  padding: 1.5em 10rem;         
   border-radius: 26px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
   display: flex;
@@ -64,7 +64,9 @@ body {
   color: #4C1E77;
   font-weight: bolder;
   cursor: pointer;
+  font-size: 15px;
   text-align: center;
+  font-weight: 00;
   box-shadow: 1px 4px 10px rgba(76, 30, 119, 0.452);
 }
 .btn-social:hover {
@@ -79,6 +81,7 @@ body {
   max-width: 480px;
   display: flex;
   flex-direction: column;
+  padding: 1.5rem;
 
 }
 
@@ -175,9 +178,9 @@ body {
   position: absolute;
   top: 1rem;
   left: 1rem;
-  background: #4C1E77;
-  color: #fff;
-  border: none;
+  background: none;
+  color: #4C1E77;
+  border: 1px solid rgba(76, 30, 119, 0.18);
   border-radius: 0.5rem;
   padding: 0.6rem 2rem;
   cursor: pointer;
@@ -186,7 +189,7 @@ body {
 }
 
 .btn-voltar-home:hover {
-  background: #A020F0;
+  background: rgba(76, 30, 119, 0.18);
 }
 
 @media (max-width: 1100px) {
@@ -210,4 +213,9 @@ body {
   .right {
     width: 100%;
   }
+  .btn-voltar-home {
+    border: none;
+  padding: 0.5rem;
+  
+}
 }

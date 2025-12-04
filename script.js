@@ -67,10 +67,17 @@ ReactDOM.render(
                 <p className="hero-informacao">Leva menos de 2 minutos para começar.</p>
             </div>
         </section>
-        <footer className="footer">
-            <p className="footer-texto">Stage Nexus &copy; 2025 — Conectando artistas e produtores.</p>
-            <p className="footer-texto-menor">Projeto acadêmico. Plataforma em desenvolvimento.</p>
-        </footer>
+        
     </div>,
     document.getElementById("home-deslogado")
 );
+async function rodape() {
+    ReactDOM.render(
+    <footer className="footer">
+            <p className="footer-texto">Stage Nexus &copy; 2025 — Conectando artistas e produtores.</p>
+            <p className="footer-texto-menor">Projeto acadêmico. Plataforma em desenvolvimento.</p>
+        </footer>,
+        document.getElementById("teste")
+    )
+}
+rodape();
